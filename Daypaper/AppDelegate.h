@@ -11,5 +11,9 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 
+-(void)downloadWallpaper;
+-(void)setWallpaper:(NSString *)imagePath;
+-(void)revealInFinder:(NSString *)imagePath;
+
 @end
 
