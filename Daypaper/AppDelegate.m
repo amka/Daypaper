@@ -41,12 +41,26 @@
     if(!wpTimer) {
         wpTimer = [NSTimer scheduledTimerWithTimeInterval:3600
                                                    target:self
-                                                 selector:@selector(downloadWallpaper)
+                                                 selector:@selector(wpTimerFire)
                                                  userInfo:nil
                                                   repeats:YES];
         
         NSLog(@"Timer initialized");
+        [wpTimer fire];
     };
+}
+
+// Fires by wpTimer
+- (void)wpTimerFire {
+    
+    // Check if wp already downloaded
+    NSString *wpPath = [self makeWpFilepath];
+    if (![self isWpExists:wpPath]) {
+        
+        // If it's not then download new one
+        [self downloadWallpaper];
+    }
+    NSLog(@"Wallpaper already exists at %@", wpPath);
 }
 
 // Download from http://yandex.ru/images/today?size=widthxheight
@@ -118,7 +132,7 @@
     [self revealInFinder:image_path];
 }
 
-- (NSString *)makeDownloadPath {
+- (NSString *)makeWpFilepath {
     NSString *fullPath;
     
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
@@ -126,21 +140,29 @@
     dateFormatter.timeStyle = NSDateFormatterNoStyle;
     NSString *filename = [NSString stringWithFormat:@"%@.jpg", [dateFormatter stringFromDate:[NSDate date]]];
     
-    NSLog(@"Download filename: %@", filename);
-    
     NSString *picturesPath = [NSSearchPathForDirectoriesInDomains(NSPicturesDirectory, NSUserDomainMask, YES) firstObject];
     NSString *downloadDirectory = [picturesPath stringByAppendingPathComponent:@"Daypaper"];
     
-    NSLog(@"Download directory: %@", downloadDirectory);
     fullPath = [downloadDirectory stringByAppendingPathComponent:filename];
+    return fullPath;
+}
+
+- (BOOL)isWpExists:(NSString *)filepath {
+    NSLog(@"Is file exists at %@: %hhd", filepath, [[NSFileManager new] fileExistsAtPath:filepath]);
+    return [[NSFileManager new] fileExistsAtPath:filepath];
+}
+
+// Create download path if it's not exist
+- (NSString *)makeDownloadPath {
+    
+    NSString *wpPath = [self makeWpFilepath];
     
     NSFileManager *fileManager = [NSFileManager new];
-    
-    if (![fileManager fileExistsAtPath:downloadDirectory]) {
-        [fileManager createDirectoryAtPath:downloadDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+    if (![fileManager fileExistsAtPath:[wpPath stringByDeletingLastPathComponent]]) {
+        [fileManager createDirectoryAtPath:[wpPath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:nil];
     }
     
-    return  fullPath;
+    return  wpPath;
 }
 
 @end
