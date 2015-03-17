@@ -10,6 +10,11 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+@property (strong) NSStatusItem *statusItem;
+@property (weak) IBOutlet NSMenu *statusMenu;
+
+@property (weak) IBOutlet NSTextField *wpNameLabel;
+@property (weak) IBOutlet NSProgressIndicator *wpSpinner;
 
 -(void)downloadWallpaper;
 -(void)setWallpaper:(NSString *)imagePath;

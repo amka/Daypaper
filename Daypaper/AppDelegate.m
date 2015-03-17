@@ -12,10 +12,22 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    NSStatusBar *systemStatusBar = [NSStatusBar systemStatusBar];
+    self.statusItem = [systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
+    
+//    self.statusItem.title = @"Daypaper";
+    self.statusItem.image = [NSImage imageNamed:@"MenuItemIcon"];
+    self.statusItem.highlightMode = YES;
+    self.statusItem.menu = self.statusMenu;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+}
+
+- (void)awakeFromNib {
+    NSRect frame = [[NSScreen mainScreen] frame];
+    NSLog(@"Resolution %dx%d", (int)frame.size.width, (int)frame.size.height);
 }
 
 // Download from http://yandex.ru/images/today?size=widthxheight
