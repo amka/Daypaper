@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2AE290C41AB86C2300DAC95B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE290C31AB86C2300DAC95B /* AppDelegate.m */; };
+		2AE290C61AB86C2300DAC95B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE290C51AB86C2300DAC95B /* main.m */; };
+		2AE290C81AB86C2300DAC95B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE290C71AB86C2300DAC95B /* Images.xcassets */; };
+		2AE290CB1AB86C2300DAC95B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE290C91AB86C2300DAC95B /* MainMenu.xib */; };
+		2AE290D71AB86C2300DAC95B /* DaypaperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE290D61AB86C2300DAC95B /* DaypaperTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2AE290D11AB86C2300DAC95B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AE290B51AB86C2300DAC95B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AE290BC1AB86C2300DAC95B;
+			remoteInfo = Daypaper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2AE290BD1AB86C2300DAC95B /* Daypaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daypaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AE290C11AB86C2300DAC95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE290C21AB86C2300DAC95B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2AE290C31AB86C2300DAC95B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2AE290C51AB86C2300DAC95B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2AE290C71AB86C2300DAC95B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2AE290CA1AB86C2300DAC95B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2AE290D01AB86C2300DAC95B /* DaypaperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaypaperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AE290D51AB86C2300DAC95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE290D61AB86C2300DAC95B /* DaypaperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaypaperTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2AE290BA1AB86C2300DAC95B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE290CD1AB86C2300DAC95B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AE290B41AB86C2300DAC95B = {
+			isa = PBXGroup;
+			children = (
+				2AE290BF1AB86C2300DAC95B /* Daypaper */,
+				2AE290D31AB86C2300DAC95B /* DaypaperTests */,
+				2AE290BE1AB86C2300DAC95B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2AE290BE1AB86C2300DAC95B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2AE290BD1AB86C2300DAC95B /* Daypaper.app */,
+				2AE290D01AB86C2300DAC95B /* DaypaperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2AE290BF1AB86C2300DAC95B /* Daypaper */ = {
+			isa = PBXGroup;
+			children = (
+				2AE290C21AB86C2300DAC95B /* AppDelegate.h */,
+				2AE290C31AB86C2300DAC95B /* AppDelegate.m */,
+				2AE290C71AB86C2300DAC95B /* Images.xcassets */,
+				2AE290C91AB86C2300DAC95B /* MainMenu.xib */,
+				2AE290C01AB86C2300DAC95B /* Supporting Files */,
+			);
+			path = Daypaper;
+			sourceTree = "<group>";
+		};
+		2AE290C01AB86C2300DAC95B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2AE290C11AB86C2300DAC95B /* Info.plist */,
+				2AE290C51AB86C2300DAC95B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AE290D31AB86C2300DAC95B /* DaypaperTests */ = {
+			isa = PBXGroup;
+			children = (
+				2AE290D61AB86C2300DAC95B /* DaypaperTests.m */,
+				2AE290D41AB86C2300DAC95B /* Supporting Files */,
+			);
+			path = DaypaperTests;
+			sourceTree = "<group>";
+		};
+		2AE290D41AB86C2300DAC95B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2AE290D51AB86C2300DAC95B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2AE290BC1AB86C2300DAC95B /* Daypaper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AE290DA1AB86C2300DAC95B /* Build configuration list for PBXNativeTarget "Daypaper" */;
+			buildPhases = (
+				2AE290B91AB86C2300DAC95B /* Sources */,
+				2AE290BA1AB86C2300DAC95B /* Frameworks */,
+				2AE290BB1AB86C2300DAC95B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Daypaper;
+			productName = Daypaper;
+			productReference = 2AE290BD1AB86C2300DAC95B /* Daypaper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2AE290CF1AB86C2300DAC95B /* DaypaperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AE290DD1AB86C2300DAC95B /* Build configuration list for PBXNativeTarget "DaypaperTests" */;
+			buildPhases = (
+				2AE290CC1AB86C2300DAC95B /* Sources */,
+				2AE290CD1AB86C2300DAC95B /* Frameworks */,
+				2AE290CE1AB86C2300DAC95B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2AE290D21AB86C2300DAC95B /* PBXTargetDependency */,
+			);
+			name = DaypaperTests;
+			productName = DaypaperTests;
+			productReference = 2AE290D01AB86C2300DAC95B /* DaypaperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2AE290B51AB86C2300DAC95B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Andrey M";
+				TargetAttributes = {
+					2AE290BC1AB86C2300DAC95B = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					2AE290CF1AB86C2300DAC95B = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 2AE290BC1AB86C2300DAC95B;
+					};
+				};
+			};
+			buildConfigurationList = 2AE290B81AB86C2300DAC95B /* Build configuration list for PBXProject "Daypaper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2AE290B41AB86C2300DAC95B;
+			productRefGroup = 2AE290BE1AB86C2300DAC95B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2AE290BC1AB86C2300DAC95B /* Daypaper */,
+				2AE290CF1AB86C2300DAC95B /* DaypaperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2AE290BB1AB86C2300DAC95B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AE290C81AB86C2300DAC95B /* Images.xcassets in Resources */,
+				2AE290CB1AB86C2300DAC95B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE290CE1AB86C2300DAC95B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2AE290B91AB86C2300DAC95B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AE290C61AB86C2300DAC95B /* main.m in Sources */,
+				2AE290C41AB86C2300DAC95B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE290CC1AB86C2300DAC95B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AE290D71AB86C2300DAC95B /* DaypaperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2AE290D21AB86C2300DAC95B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AE290BC1AB86C2300DAC95B /* Daypaper */;
+			targetProxy = 2AE290D11AB86C2300DAC95B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2AE290C91AB86C2300DAC95B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AE290CA1AB86C2300DAC95B /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2AE290D81AB86C2300DAC95B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2AE290D91AB86C2300DAC95B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2AE290DB1AB86C2300DAC95B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Daypaper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2AE290DC1AB86C2300DAC95B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Daypaper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2AE290DE1AB86C2300DAC95B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DaypaperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Daypaper.app/Contents/MacOS/Daypaper";
+			};
+			name = Debug;
+		};
+		2AE290DF1AB86C2300DAC95B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DaypaperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Daypaper.app/Contents/MacOS/Daypaper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2AE290B81AB86C2300DAC95B /* Build configuration list for PBXProject "Daypaper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AE290D81AB86C2300DAC95B /* Debug */,
+				2AE290D91AB86C2300DAC95B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AE290DA1AB86C2300DAC95B /* Build configuration list for PBXNativeTarget "Daypaper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AE290DB1AB86C2300DAC95B /* Debug */,
+				2AE290DC1AB86C2300DAC95B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2AE290DD1AB86C2300DAC95B /* Build configuration list for PBXNativeTarget "DaypaperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AE290DE1AB86C2300DAC95B /* Debug */,
+				2AE290DF1AB86C2300DAC95B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2AE290B51AB86C2300DAC95B /* Project object */;
+}
