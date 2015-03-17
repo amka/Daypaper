@@ -8,17 +8,22 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    NSString *image_path;
+}
 
 @property (strong) NSStatusItem *statusItem;
 @property (weak) IBOutlet NSMenu *statusMenu;
 
 @property (weak) IBOutlet NSTextField *wpNameLabel;
 @property (weak) IBOutlet NSProgressIndicator *wpSpinner;
+@property (weak) IBOutlet NSMenuItem *revealInFinderItem;
 
 -(void)downloadWallpaper;
 -(void)setWallpaper:(NSString *)imagePath;
 -(void)revealInFinder:(NSString *)imagePath;
+
+-(IBAction)revealInFinderClicked:(id)sender;
 
 @end
 

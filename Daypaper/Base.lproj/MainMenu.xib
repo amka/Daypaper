@@ -13,6 +13,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="revealInFinderItem" destination="weK-PC-bpE" id="M61-m9-MN2"/>
                 <outlet property="statusMenu" destination="jJO-us-g56" id="QyC-O0-Y2l"/>
                 <outlet property="wpNameLabel" destination="jq3-aP-1TF" id="0CM-5R-5nC"/>
                 <outlet property="wpSpinner" destination="jvO-NV-mWG" id="TRb-BS-6TO"/>
@@ -679,6 +680,9 @@
                 <menuItem isSeparatorItem="YES" id="IWc-Ai-3yb"/>
                 <menuItem title="Reveal in Finder" id="weK-PC-bpE">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="revealInFinderClicked:" target="Voe-Tx-rLC" id="jYt-PJ-5pd"/>
+                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="3xs-wV-Ncz"/>
                 <menuItem title="Quit" id="hJg-cK-cEY">
