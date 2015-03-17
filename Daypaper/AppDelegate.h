@@ -10,6 +10,7 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
     NSString *image_path;
+    NSTimer *wpTimer;
 }
 
 @property (strong) NSStatusItem *statusItem;

@@ -24,17 +24,36 @@
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+    
+    // Destroing wpTimer
+    if (wpTimer) {
+        [wpTimer invalidate];
+        wpTimer = nil;
+    }
 }
 
 - (void)awakeFromNib {
-    [self downloadWallpaper];
+    [self initWpTimer];
+//    [self downloadWallpaper];
+}
+
+- (void)initWpTimer {
+    if(!wpTimer) {
+        wpTimer = [NSTimer scheduledTimerWithTimeInterval:3600
+                                                   target:self
+                                                 selector:@selector(downloadWallpaper)
+                                                 userInfo:nil
+                                                  repeats:YES];
+        
+        NSLog(@"Timer initialized");
+    };
 }
 
 // Download from http://yandex.ru/images/today?size=widthxheight
 - (void)downloadWallpaper {
     
     self.revealInFinderItem.enabled = NO;
+    [self.wpSpinner startAnimation:nil];
     
     NSRect frame = [[NSScreen mainScreen] frame];
     
@@ -42,8 +61,8 @@
     NSURLRequest *downloadRequest = [NSURLRequest requestWithURL:downloadUrl];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:downloadRequest];
-    
-    NSString *fullPath = [NSTemporaryDirectory() stringByAppendingString:[downloadUrl lastPathComponent]];
+
+    NSString *fullPath = [self makeDownloadPath];
     
     NSLog(@"Begin download to %@", fullPath);
     image_path = [NSString stringWithString:fullPath];
@@ -70,11 +89,15 @@
             NSLog(@"SUCCESS: %lld", fileSize);
 //            [[_downloadFile titleLabel] setText:[NSString stringWithFormat:@"%lld", fileSize]];
             
-            self.revealInFinderItem.enabled = YES;
         }
+        
+        self.revealInFinderItem.enabled = YES;
+        [self.wpSpinner stopAnimation:self];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"ERROR: %@", error.description);
+        
+        [self.wpSpinner stopAnimation:nil];
     }];
     
     [operation start];
@@ -93,6 +116,31 @@
 
 - (void)revealInFinderClicked:(id)sender {
     [self revealInFinder:image_path];
+}
+
+- (NSString *)makeDownloadPath {
+    NSString *fullPath;
+    
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    dateFormatter.dateStyle = NSDateFormatterShortStyle;
+    dateFormatter.timeStyle = NSDateFormatterNoStyle;
+    NSString *filename = [NSString stringWithFormat:@"%@.jpg", [dateFormatter stringFromDate:[NSDate date]]];
+    
+    NSLog(@"Download filename: %@", filename);
+    
+    NSString *picturesPath = [NSSearchPathForDirectoriesInDomains(NSPicturesDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *downloadDirectory = [picturesPath stringByAppendingPathComponent:@"Daypaper"];
+    
+    NSLog(@"Download directory: %@", downloadDirectory);
+    fullPath = [downloadDirectory stringByAppendingPathComponent:filename];
+    
+    NSFileManager *fileManager = [NSFileManager new];
+    
+    if (![fileManager fileExistsAtPath:downloadDirectory]) {
+        [fileManager createDirectoryAtPath:downloadDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    
+    return  fullPath;
 }
 
 @end
