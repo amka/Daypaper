@@ -155,7 +155,6 @@
 }
 
 - (BOOL)isWpExists:(NSString *)filepath {
-    NSLog(@"Is file exists at %@: %hhd", filepath, [[NSFileManager new] fileExistsAtPath:filepath]);
     return [[NSFileManager new] fileExistsAtPath:filepath];
 }
 
