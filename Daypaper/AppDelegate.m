@@ -68,7 +68,6 @@
 - (void)downloadWallpaper {
     
     self.revealInFinderItem.enabled = NO;
-    [self.wpSpinner startAnimation:nil];
     
     NSRect frame = [[NSScreen mainScreen] frame];
     
@@ -106,15 +105,12 @@
         }
         
         self.revealInFinderItem.enabled = YES;
-        [self.wpSpinner stopAnimation:self];
         
         NSLog(@"Setting wallpaper with %@", fullPath);
         [self setWallpaper:fullPath];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"ERROR: %@", error.description);
-        
-        [self.wpSpinner stopAnimation:nil];
     }];
     
     [operation start];
@@ -169,6 +165,10 @@
     }
     
     return  wpPath;
+}
+
+- (void)downloadClicked:(id)sender {
+    [self downloadWallpaper];
 }
 
 @end
