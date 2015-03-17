@@ -59,8 +59,9 @@
         
         // If it's not then download new one
         [self downloadWallpaper];
+    } else {
+        NSLog(@"Wallpaper already exists at %@", wpPath);
     }
-    NSLog(@"Wallpaper already exists at %@", wpPath);
 }
 
 // Download from http://yandex.ru/images/today?size=widthxheight
@@ -79,7 +80,6 @@
     NSString *fullPath = [self makeDownloadPath];
     
     NSLog(@"Begin download to %@", fullPath);
-    image_path = [NSString stringWithString:fullPath];
     
     [operation setOutputStream:[NSOutputStream outputStreamToFileAtPath:fullPath append:NO]];
     
@@ -108,6 +108,9 @@
         self.revealInFinderItem.enabled = YES;
         [self.wpSpinner stopAnimation:self];
         
+        NSLog(@"Setting wallpaper with %@", fullPath);
+        [self setWallpaper:fullPath];
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"ERROR: %@", error.description);
         
@@ -119,8 +122,11 @@
 
 //
 - (void)setWallpaper:(NSString *)imagePath {
-    NSURL *imageUrl = [NSURL URLWithString:imagePath];
-    [[NSWorkspace sharedWorkspace] setDesktopImageURL:imageUrl forScreen:[NSScreen mainScreen] options:nil error:nil];
+    NSURL *imageUrl = [NSURL fileURLWithPath: imagePath];
+    NSError *error = nil;
+    if(![[NSWorkspace sharedWorkspace] setDesktopImageURL:imageUrl forScreen:[NSScreen mainScreen] options:@{} error:&error]) {
+        NSLog(@"Error setWallpaper: %@", error.description);
+    }
 }
 
 //
@@ -129,9 +135,10 @@
 }
 
 - (void)revealInFinderClicked:(id)sender {
-    [self revealInFinder:image_path];
+    [self revealInFinder:[self makeWpFilepath]];
 }
 
+// Create full path with current date as filename
 - (NSString *)makeWpFilepath {
     NSString *fullPath;
     
