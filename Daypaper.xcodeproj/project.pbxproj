@@ -384,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3689901DF48B7DEDCE285E3A /* Pods-Daypaper.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = DaypaperIcon;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Daypaper/Info.plist;
@@ -396,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6254D7ACF522E3A90067C234 /* Pods-Daypaper.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = DaypaperIcon;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Daypaper/Info.plist;

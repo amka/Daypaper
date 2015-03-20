@@ -18,8 +18,8 @@
     self.statusItem = [systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
     
 //    self.statusItem.title = @"Daypaper";
-    self.statusItem.image = [NSImage imageNamed:@"MenuItemIcon"];
-    self.statusItem.alternateImage = [NSImage imageNamed:@"MenuItemIconInv"];
+    self.statusItem.image = [NSImage imageNamed:@"StatusIcon"];
+    self.statusItem.alternateImage = [NSImage imageNamed:@"StatusIconInv"];
     self.statusItem.highlightMode = YES;
     self.statusItem.menu = self.statusMenu;
 }

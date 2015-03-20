@@ -3,12 +3,12 @@
     {
       "idiom" : "mac",
       "scale" : "1x",
-      "filename" : "photo-2.png"
+      "filename" : "StatusIconInv16.png"
     },
     {
       "idiom" : "mac",
       "scale" : "2x",
-      "filename" : "photo-2-1.png"
+      "filename" : "StatusIconInv32.png"
     }
   ],
   "info" : {
