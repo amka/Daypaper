@@ -122,8 +122,13 @@
     NSURL *imageUrl = [NSURL fileURLWithPath: imagePath];
     NSError *error = nil;
     if(![[NSWorkspace sharedWorkspace] setDesktopImageURL:imageUrl forScreen:[NSScreen mainScreen] options:@{} error:&error]) {
-        NSLog(@"Error setWallpaper: %@", error.description);
+        NSString *errorString = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Error set Wallpaper", "error setWallpaper"), error.description];
+        [self sendUserNotification:errorString];
+        NSLog(@"%@", errorString);
+        return;
     }
+    
+    [self sendUserNotification:NSLocalizedString(@"Wallpaper successfully changed", @"wallpaper changed")];
 }
 
 //
@@ -173,6 +178,17 @@
 
 - (void)downloadClicked:(id)sender {
     [self downloadWallpaper];
+}
+
+// User notification 'bout smth
+- (void)sendUserNotification:(NSString *)message {
+    
+    NSUserNotification *notification = [NSUserNotification new];
+    notification.title = @"Daypaper";
+    notification.informativeText = message;
+    notification.soundName = NSUserNotificationDefaultSoundName;
+    
+    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
 }
 
 @end
