@@ -139,10 +139,13 @@
 - (NSString *)makeWpFilepath {
     NSString *fullPath;
     
+    NSRect screenFrame = [[NSScreen mainScreen] frame];
+    
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     dateFormatter.dateStyle = NSDateFormatterShortStyle;
     dateFormatter.timeStyle = NSDateFormatterNoStyle;
-    NSString *filename = [NSString stringWithFormat:@"%@.jpg", [dateFormatter stringFromDate:[NSDate date]]];
+    
+    NSString *filename = [NSString stringWithFormat:@"%@-%dx%d.jpg", [dateFormatter stringFromDate:[NSDate date]], (int)screenFrame.size.width, (int)screenFrame.size.height];
     
     NSString *picturesPath = [NSSearchPathForDirectoriesInDomains(NSPicturesDirectory, NSUserDomainMask, YES) firstObject];
     NSString *downloadDirectory = [picturesPath stringByAppendingPathComponent:@"Daypaper"];
