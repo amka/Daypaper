@@ -111,7 +111,11 @@
         [self setWallpaper:fullPath];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"ERROR: %@", error.description);
+        NSString *errorString = [NSString stringWithFormat:@"%@: %@",
+                                 NSLocalizedString(@"Can not download wallpaper", nil),
+                                 error.localizedDescription];
+        [self sendUserNotification:errorString];
+        NSLog(@"ERROR: %@", errorString);
     }];
     
     [operation start];
@@ -133,10 +137,11 @@
 
 //
 - (void)revealInFinder:(NSString *)imagePath {
-    [[NSWorkspace sharedWorkspace] openFile:imagePath withApplication:@"Finder"];
+    NSURL *fileURL = [NSURL fileURLWithPath:imagePath];
+    [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:@[fileURL]];
 }
 
-- (void)revealInFinderClicked:(id)sender {
+- (IBAction)revealInFinderClicked:(id)sender {
     [self revealInFinder:[self makeWpFilepath]];
 }
 

@@ -14,3 +14,6 @@
 
 // User notification title
 "Fresh Look!" = "Fresh Look!";
+
+// Error on HTTP Request
+"Can not download wallpaper" = "Can not download wallpaper";

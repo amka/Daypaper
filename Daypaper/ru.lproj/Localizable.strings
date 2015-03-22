@@ -14,3 +14,6 @@
 
 // User notification title
 "Fresh Look!" = "Новые обои!";
+
+// Error on HTTP Request
+"Can not download wallpaper" = "Не могу скачать новые обои";
