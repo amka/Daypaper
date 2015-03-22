@@ -184,7 +184,7 @@
 - (void)sendUserNotification:(NSString *)message {
     
     NSUserNotification *notification = [NSUserNotification new];
-    notification.title = @"Daypaper";
+    notification.title = NSLocalizedString(@"Fresh Look!", @"fresh look");
     notification.informativeText = message;
     notification.soundName = NSUserNotificationDefaultSoundName;
     
