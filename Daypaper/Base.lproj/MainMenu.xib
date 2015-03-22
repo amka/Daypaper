@@ -689,6 +689,12 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="3xs-wV-Ncz"/>
+                <menuItem title="About Daypaper" id="1B6-nY-b3t">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="orderFrontStandardAboutPanel:" target="-1" id="OYk-cv-e72"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Quit" id="hJg-cK-cEY">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
