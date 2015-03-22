@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2A8AFD4A1ABEE15600324EEE /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2A8AFD491ABEE15600324EEE /* dsa_pub.pem */; };
-		2A8AFD4C1ABEF2DA00324EEE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A8AFD4B1ABEF2DA00324EEE /* Credits.rtf */; };
+		2AC74C761ABEFC180038FCBE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2AC74C781ABEFC180038FCBE /* Credits.rtf */; };
+		2AC74C7C1ABEFD370038FCBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AC74C7E1ABEFD370038FCBE /* Localizable.strings */; };
 		2AE290C41AB86C2300DAC95B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE290C31AB86C2300DAC95B /* AppDelegate.m */; };
 		2AE290C61AB86C2300DAC95B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE290C51AB86C2300DAC95B /* main.m */; };
 		2AE290C81AB86C2300DAC95B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE290C71AB86C2300DAC95B /* Images.xcassets */; };
@@ -29,7 +30,11 @@
 
 /* Begin PBXFileReference section */
 		2A8AFD491ABEE15600324EEE /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
-		2A8AFD4B1ABEF2DA00324EEE /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		2AC74C751ABEFAF80038FCBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		2AC74C771ABEFC180038FCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Base; path = Base.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2AC74C791ABEFC1A0038FCBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2AC74C7D1ABEFD370038FCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2AC74C7F1ABEFDBA0038FCBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2AE290BD1AB86C2300DAC95B /* Daypaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daypaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE290C11AB86C2300DAC95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AE290C21AB86C2300DAC95B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,7 +107,8 @@
 				2A8AFD491ABEE15600324EEE /* dsa_pub.pem */,
 				2AE290C11AB86C2300DAC95B /* Info.plist */,
 				2AE290C51AB86C2300DAC95B /* main.m */,
-				2A8AFD4B1ABEF2DA00324EEE /* Credits.rtf */,
+				2AC74C781ABEFC180038FCBE /* Credits.rtf */,
+				2AC74C7E1ABEFD370038FCBE /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 2AE290B41AB86C2300DAC95B;
 			productRefGroup = 2AE290BE1AB86C2300DAC95B /* Products */;
@@ -223,10 +230,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC74C7C1ABEFD370038FCBE /* Localizable.strings in Resources */,
 				2AE290C81AB86C2300DAC95B /* Images.xcassets in Resources */,
 				2A8AFD4A1ABEE15600324EEE /* dsa_pub.pem in Resources */,
 				2AE290CB1AB86C2300DAC95B /* MainMenu.xib in Resources */,
-				2A8AFD4C1ABEF2DA00324EEE /* Credits.rtf in Resources */,
+				2AC74C761ABEFC180038FCBE /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,10 +309,29 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2AC74C781ABEFC180038FCBE /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AC74C771ABEFC180038FCBE /* Base */,
+				2AC74C791ABEFC1A0038FCBE /* ru */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		2AC74C7E1ABEFD370038FCBE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AC74C7D1ABEFD370038FCBE /* Base */,
+				2AC74C7F1ABEFDBA0038FCBE /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		2AE290C91AB86C2300DAC95B /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2AE290CA1AB86C2300DAC95B /* Base */,
+				2AC74C751ABEFAF80038FCBE /* ru */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -397,6 +424,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Daypaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -410,6 +438,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Daypaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Daypaper
+
+  Created by Andrey M on 22.03.15.
+  Copyright (c) 2015 Andrey M. All rights reserved.
+*/
+
+// User notification when wallpaper changed
+"Wallpaper successfully changed" = "Wallpaper successfully changed";
+
+// User notification when wallpaper couldn't be changed
+"Error set Wallpaper" = "Error setting wallpaper";
+
+// User notification title
+"Fresh Look!" = "Fresh Look!";
