@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A8AFD4A1ABEE15600324EEE /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2A8AFD491ABEE15600324EEE /* dsa_pub.pem */; };
 		2AE290C41AB86C2300DAC95B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE290C31AB86C2300DAC95B /* AppDelegate.m */; };
 		2AE290C61AB86C2300DAC95B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE290C51AB86C2300DAC95B /* main.m */; };
 		2AE290C81AB86C2300DAC95B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE290C71AB86C2300DAC95B /* Images.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A8AFD491ABEE15600324EEE /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		2AE290BD1AB86C2300DAC95B /* Daypaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daypaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE290C11AB86C2300DAC95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AE290C21AB86C2300DAC95B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		2AE290C01AB86C2300DAC95B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2A8AFD491ABEE15600324EEE /* dsa_pub.pem */,
 				2AE290C11AB86C2300DAC95B /* Info.plist */,
 				2AE290C51AB86C2300DAC95B /* main.m */,
 			);
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AE290C81AB86C2300DAC95B /* Images.xcassets in Resources */,
+				2A8AFD4A1ABEE15600324EEE /* dsa_pub.pem in Resources */,
 				2AE290CB1AB86C2300DAC95B /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
