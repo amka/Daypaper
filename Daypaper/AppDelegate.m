@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <AFHTTPRequestOperation.h>
+#import <NSBundle+LoginItem.h>
 
 
 @implementation AppDelegate
@@ -35,6 +36,9 @@
 
 - (void)awakeFromNib {
     [self initWpTimer];
+    
+    
+    self.toggleLoginItem.state = [[NSBundle mainBundle] isLoginItemEnabled] ? NSOnState : NSOffState;
 //    [self downloadWallpaper];
 }
 
@@ -194,6 +198,17 @@
     notification.soundName = NSUserNotificationDefaultSoundName;
     
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+}
+
+- (IBAction)toggleLoginItem:(id)sender {
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    if ([mainBundle isLoginItemEnabled]) {
+        [mainBundle disableLoginItem];
+    } else {
+        [mainBundle enableLoginItem];
+    }
+    
+    self.toggleLoginItem.state = [mainBundle isLoginItemEnabled] ? NSOnState : NSOffState;
 }
 
 @end

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -16,6 +16,7 @@
             <connections>
                 <outlet property="revealInFinderItem" destination="weK-PC-bpE" id="M61-m9-MN2"/>
                 <outlet property="statusMenu" destination="jJO-us-g56" id="QyC-O0-Y2l"/>
+                <outlet property="toggleLoginItem" destination="cEN-gU-3dl" id="kwp-IQ-em3"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -683,10 +684,16 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="Dy4-gl-3rv"/>
-                <menuItem title="Check for Updates…" id="cEN-gU-3dl">
+                <menuItem title="Start on login" id="cEN-gU-3dl">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="checkForUpdates:" target="2eV-1R-afc" id="L7h-HH-alf"/>
+                        <action selector="toggleLoginItem:" target="Voe-Tx-rLC" id="YoH-m1-XSQ"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Check for Updates…" id="OxV-TP-21X">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="checkForUpdates:" target="2eV-1R-afc" id="XnC-95-KZO"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="3xs-wV-Ncz"/>

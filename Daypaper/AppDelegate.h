@@ -11,12 +11,14 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate> {
     NSString *image_path;
     NSTimer *wpTimer;
+    
 }
 
 @property (strong) NSStatusItem *statusItem;
 @property (weak) IBOutlet NSMenu *statusMenu;
 
 @property (weak) IBOutlet NSMenuItem *revealInFinderItem;
+@property (weak) IBOutlet NSMenuItem *toggleLoginItem;
 
 -(void)downloadWallpaper;
 -(void)setWallpaper:(NSString *)imagePath;
@@ -24,6 +26,7 @@
 
 -(IBAction)downloadClicked:(id)sender;
 -(IBAction)revealInFinderClicked:(id)sender;
+-(IBAction)toggleLoginItem:(id)sender;
 
 @end
 

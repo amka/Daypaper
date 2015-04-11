@@ -266,8 +266,11 @@
 /* Class = "NSMenuItem"; title = "Use None"; ObjectID = "cDB-IK-hbR"; */
 "cDB-IK-hbR.title" = "Use None";
 
-/* Class = "NSMenuItem"; title = "Check for Updates…"; ObjectID = "cEN-gU-3dl"; */
-"cEN-gU-3dl.title" = "Проверить обновления…";
+/* Class = "NSMenuItem"; title = "Start on Login"; ObjectID = "cEN-gU-3dl"; */
+"cEN-gU-3dl.title" = "Запускать при входе в систему";
+
+/* Class = "NSMenuItem"; title = "Check for Updates…"; ObjectID = "OxV-TP-21X"; */
+"OxV-TP-21X.title" = "Проверить обновления…";
 
 /* Class = "NSMenuItem"; title = "Selection"; ObjectID = "cqv-fj-IhA"; */
 "cqv-fj-IhA.title" = "Selection";
