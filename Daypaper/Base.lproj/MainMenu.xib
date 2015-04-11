@@ -16,6 +16,7 @@
             <connections>
                 <outlet property="revealInFinderItem" destination="weK-PC-bpE" id="M61-m9-MN2"/>
                 <outlet property="statusMenu" destination="jJO-us-g56" id="QyC-O0-Y2l"/>
+                <outlet property="toggleDownloadOnly" destination="eyI-hM-Zsn" id="ImO-2w-PNX"/>
                 <outlet property="toggleLoginItem" destination="cEN-gU-3dl" id="kwp-IQ-em3"/>
             </connections>
         </customObject>
@@ -684,12 +685,19 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="Dy4-gl-3rv"/>
+                <menuItem title="Download only" id="eyI-hM-Zsn">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggleDownloadOnly:" target="Voe-Tx-rLC" id="hF9-d7-Il3"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Start on login" id="cEN-gU-3dl">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="toggleLoginItem:" target="Voe-Tx-rLC" id="YoH-m1-XSQ"/>
                     </connections>
                 </menuItem>
+                <menuItem isSeparatorItem="YES" id="Z7t-oA-UAc"/>
                 <menuItem title="Check for Updates…" id="OxV-TP-21X">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -710,7 +718,7 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="145" y="291.5"/>
+            <point key="canvasLocation" x="142" y="317.5"/>
         </menu>
         <customObject id="2eV-1R-afc" customClass="SUUpdater"/>
     </objects>

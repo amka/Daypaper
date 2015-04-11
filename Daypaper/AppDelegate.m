@@ -27,18 +27,16 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     
-    // Destroing wpTimer
-    if (wpTimer) {
-        [wpTimer invalidate];
-        wpTimer = nil;
-    }
+    [self deleteWpTimer];
 }
 
 - (void)awakeFromNib {
-    [self initWpTimer];
-    
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"DownloadOnly"] != 1) {
+        [self initWpTimer];
+    }
     
     self.toggleLoginItem.state = [[NSBundle mainBundle] isLoginItemEnabled] ? NSOnState : NSOffState;
+    self.toggleDownloadOnly.state = [[NSUserDefaults standardUserDefaults] integerForKey:@"DownloadOnly"];
 //    [self downloadWallpaper];
 }
 
@@ -66,6 +64,14 @@
         [self downloadWallpaper];
     } else {
         NSLog(@"Wallpaper already exists at %@", wpPath);
+    }
+}
+
+- (void)deleteWpTimer {
+    // Destroing wpTimer
+    if (wpTimer) {
+        [wpTimer invalidate];
+        wpTimer = nil;
     }
 }
 
@@ -209,6 +215,17 @@
     }
     
     self.toggleLoginItem.state = [mainBundle isLoginItemEnabled] ? NSOnState : NSOffState;
+}
+
+- (void)toggleDownloadOnly:(id)sender {
+    if (self.toggleDownloadOnly.state == NSOnState) {
+        [self initWpTimer];
+    } else {
+        [self deleteWpTimer];
+    }
+    
+    self.toggleDownloadOnly.state = !self.toggleDownloadOnly.state;
+    [[NSUserDefaults standardUserDefaults] setInteger:self.toggleDownloadOnly.state forKey:@"DownloadOnly"];
 }
 
 @end

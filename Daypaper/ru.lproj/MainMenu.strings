@@ -266,6 +266,9 @@
 /* Class = "NSMenuItem"; title = "Use None"; ObjectID = "cDB-IK-hbR"; */
 "cDB-IK-hbR.title" = "Use None";
 
+/* Class = "NSMenuItem"; title = "Download Only"; ObjectID = "eyI-hM-Zsn"; */
+"eyI-hM-Zsn.title" = "Только скачивать";
+
 /* Class = "NSMenuItem"; title = "Start on Login"; ObjectID = "cEN-gU-3dl"; */
 "cEN-gU-3dl.title" = "Запускать при входе в систему";
 

@@ -30,11 +30,11 @@
 
 /* Begin PBXFileReference section */
 		2A8AFD491ABEE15600324EEE /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
-		2AC74C751ABEFAF80038FCBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2AC74C771ABEFC180038FCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Base; path = Base.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2AC74C791ABEFC1A0038FCBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2AC74C7D1ABEFD370038FCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2AC74C7F1ABEFDBA0038FCBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2AD9B3661AD9E4D600E901D3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2AE290BD1AB86C2300DAC95B /* Daypaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daypaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE290C11AB86C2300DAC95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AE290C21AB86C2300DAC95B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -331,7 +331,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2AE290CA1AB86C2300DAC95B /* Base */,
-				2AC74C751ABEFAF80038FCBE /* ru */,
+				2AD9B3661AD9E4D600E901D3 /* ru */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";

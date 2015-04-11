@@ -18,6 +18,7 @@
 @property (weak) IBOutlet NSMenu *statusMenu;
 
 @property (weak) IBOutlet NSMenuItem *revealInFinderItem;
+@property (weak) IBOutlet NSMenuItem *toggleDownloadOnly;
 @property (weak) IBOutlet NSMenuItem *toggleLoginItem;
 
 -(void)downloadWallpaper;
@@ -26,6 +27,7 @@
 
 -(IBAction)downloadClicked:(id)sender;
 -(IBAction)revealInFinderClicked:(id)sender;
+-(IBAction)toggleDownloadOnly:(id)sender;
 -(IBAction)toggleLoginItem:(id)sender;
 
 @end
