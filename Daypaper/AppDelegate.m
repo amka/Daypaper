@@ -82,7 +82,7 @@
     
     NSRect frame = [[NSScreen mainScreen] frame];
     
-    NSURL *downloadUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://yandex.ru/images/today?%dx%d", (int)frame.size.width, (int)frame.size.height]];
+    NSURL *downloadUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://yandex.ru/images/today?size=%dx%d", (int)frame.size.width, (int)frame.size.height]];
     NSURLRequest *downloadRequest = [NSURLRequest requestWithURL:downloadUrl];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:downloadRequest];
