@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NSString+BetweenTags.h"
 #import <AFHTTPRequestOperation.h>
 #import <NSBundle+LoginItem.h>
 
@@ -38,6 +39,10 @@
     self.toggleLoginItem.state = [[NSBundle mainBundle] isLoginItemEnabled] ? NSOnState : NSOffState;
     self.toggleDownloadOnly.state = [[NSUserDefaults standardUserDefaults] integerForKey:@"DownloadOnly"];
 //    [self downloadWallpaper];
+    
+    self.wallpaperTitle.stringValue = @"…";
+    self.wallpaperDescription.stringValue = @"…";
+    [self getWallpaperInfo];
 }
 
 - (void)initWpTimer {
@@ -228,4 +233,49 @@
     [[NSUserDefaults standardUserDefaults] setInteger:self.toggleDownloadOnly.state forKey:@"DownloadOnly"];
 }
 
+
+- (void)getWallpaperInfo {
+    
+    NSURL *downloadUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://yandex.ru/images/"]];
+    NSURLRequest *downloadRequest = [NSURLRequest requestWithURL:downloadUrl];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:downloadRequest];
+    operation.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSString *responseHTML = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        
+        NSString *title = [self extractWallpaperTitleFrom:responseHTML];
+        NSString *description = [self extractWallpaperDescriptionFrom:responseHTML];
+        
+        NSLog(@"Got image: %@. %@", title, description);
+        
+        self.wallpaperTitle.stringValue = title;
+        self.wallpaperDescription.stringValue = description;
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+    }];
+    
+    [operation start];
+}
+
+- (NSString *)extractWallpaperTitleFrom:(NSString *)html {
+    NSString *title = nil;
+    title = [html stringBetweenString:@"<span class=\"b-501px__name\">" andString:@"</span>"];
+    if (!title) {
+        title = [html stringBetweenString:@"<span class=\"b-500px__name\">" andString:@"</span>"];
+    }
+    return title;
+}
+
+- (NSString *)extractWallpaperDescriptionFrom:(NSString *)html {
+    NSString *description = nil;
+    description = [html stringBetweenString:@"<p class=\"b-501px__description\">" andString:@"</p>"];
+    if (!description) {
+        description = [html stringBetweenString:@"<p class=\"b-500px__description\">" andString:@"</p>"];
+    }
+    return description;
+}
 @end

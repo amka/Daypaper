@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A243B4B1BA5709900277349 /* NSString+BetweenTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A243B4A1BA5709900277349 /* NSString+BetweenTags.m */; };
 		2A8AFD4A1ABEE15600324EEE /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2A8AFD491ABEE15600324EEE /* dsa_pub.pem */; };
 		2AC74C761ABEFC180038FCBE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2AC74C781ABEFC180038FCBE /* Credits.rtf */; };
 		2AC74C7C1ABEFD370038FCBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AC74C7E1ABEFD370038FCBE /* Localizable.strings */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A243B491BA5709900277349 /* NSString+BetweenTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BetweenTags.h"; sourceTree = "<group>"; };
+		2A243B4A1BA5709900277349 /* NSString+BetweenTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BetweenTags.m"; sourceTree = "<group>"; };
 		2A8AFD491ABEE15600324EEE /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		2AC74C771ABEFC180038FCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Base; path = Base.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2AC74C791ABEFC1A0038FCBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 		2AE290BF1AB86C2300DAC95B /* Daypaper */ = {
 			isa = PBXGroup;
 			children = (
+				2A243B491BA5709900277349 /* NSString+BetweenTags.h */,
+				2A243B4A1BA5709900277349 /* NSString+BetweenTags.m */,
 				2AE290C21AB86C2300DAC95B /* AppDelegate.h */,
 				2AE290C31AB86C2300DAC95B /* AppDelegate.m */,
 				2AE290C71AB86C2300DAC95B /* Images.xcassets */,
@@ -286,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AE290C61AB86C2300DAC95B /* main.m in Sources */,
+				2A243B4B1BA5709900277349 /* NSString+BetweenTags.m in Sources */,
 				2AE290C41AB86C2300DAC95B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
