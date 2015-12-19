@@ -7,11 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <DevMateKit/DevMateKit.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate> {
     NSString *image_path;
     NSTimer *wpTimer;
 }
+
+@property NSString *wpTitle;
+@property NSString *wpDescription;
 
 @property (strong) NSStatusItem *statusItem;
 @property (weak) IBOutlet NSMenu *statusMenu;
@@ -19,18 +23,19 @@
 @property (weak) IBOutlet NSMenuItem *revealInFinderItem;
 @property (weak) IBOutlet NSMenuItem *toggleDownloadOnly;
 @property (weak) IBOutlet NSMenuItem *toggleLoginItem;
-@property (weak) IBOutlet NSTextField *wallpaperTitle;
-@property (weak) IBOutlet NSTextField *wallpaperDescription;
+@property (weak) IBOutlet NSMenuItem *wallpaperTitle;
 @property (weak) IBOutlet NSMenuItem *imageTitle;
 
--(void)downloadWallpaper;
--(void)setWallpaper:(NSString *)imagePath;
--(void)revealInFinder:(NSString *)imagePath;
+- (void)downloadWallpaper;
+- (void)setWallpaper:(NSString *)imagePath;
+- (void)revealInFinder:(NSString *)imagePath;
 
--(IBAction)downloadClicked:(id)sender;
--(IBAction)revealInFinderClicked:(id)sender;
--(IBAction)toggleDownloadOnly:(id)sender;
--(IBAction)toggleLoginItem:(id)sender;
+- (IBAction)downloadClicked:(id)sender;
+- (IBAction)revealInFinderClicked:(id)sender;
+- (IBAction)toggleDownloadOnly:(id)sender;
+- (IBAction)toggleLoginItem:(id)sender;
+- (IBAction)viewOnYandex:(id)sender;
+
 
 @end
 

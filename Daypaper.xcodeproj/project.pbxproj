@@ -159,11 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AE290DA1AB86C2300DAC95B /* Build configuration list for PBXNativeTarget "Daypaper" */;
 			buildPhases = (
-				5BD4A4EAFCDA750A7FF4DB8E /* Check Pods Manifest.lock */,
 				2AE290B91AB86C2300DAC95B /* Sources */,
+				5BD4A4EAFCDA750A7FF4DB8E /* Check Pods Manifest.lock */,
 				2AE290BA1AB86C2300DAC95B /* Frameworks */,
 				2AE290BB1AB86C2300DAC95B /* Resources */,
 				9CCE7DB8FDA1F2BBA276C013 /* Copy Pods Resources */,
+				720B35C07204FEE1E949E29F /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,6 +267,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		720B35C07204FEE1E949E29F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daypaper/Pods-Daypaper-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9CCE7DB8FDA1F2BBA276C013 /* Copy Pods Resources */ = {
@@ -428,6 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = DaypaperIcon;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Daypaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -442,6 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = DaypaperIcon;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Daypaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;

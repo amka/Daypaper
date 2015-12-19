@@ -24,6 +24,9 @@
     self.statusItem.alternateImage = [NSImage imageNamed:@"StatusIconInv"];
     self.statusItem.highlightMode = YES;
     self.statusItem.menu = self.statusMenu;
+    
+    // DevMate Kit Install
+    [DevMateKit sendTrackingReport:nil delegate:nil];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -40,8 +43,8 @@
     self.toggleDownloadOnly.state = [[NSUserDefaults standardUserDefaults] integerForKey:@"DownloadOnly"];
 //    [self downloadWallpaper];
     
-    self.wallpaperTitle.stringValue = @"…";
-    self.wallpaperDescription.stringValue = @"…";
+    self.wpTitle = @"…";
+    self.wpDescription = @"…";
     [self getWallpaperInfo];
 }
 
@@ -222,6 +225,10 @@
     self.toggleLoginItem.state = [mainBundle isLoginItemEnabled] ? NSOnState : NSOffState;
 }
 
+- (IBAction)viewOnYandex:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://yandex.ru/images/"]];
+}
+
 - (void)toggleDownloadOnly:(id)sender {
     if (self.toggleDownloadOnly.state == NSOnState) {
         [self initWpTimer];
@@ -236,7 +243,7 @@
 
 - (void)getWallpaperInfo {
     
-    NSURL *downloadUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://yandex.ru/images/"]];
+    NSURL *downloadUrl = [NSURL URLWithString:@"https://yandex.ru/images/"];
     NSURLRequest *downloadRequest = [NSURLRequest requestWithURL:downloadUrl];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:downloadRequest];
@@ -251,8 +258,8 @@
         
         NSLog(@"Got image: %@. %@", title, description);
         
-        self.wallpaperTitle.stringValue = title;
-        self.wallpaperDescription.stringValue = description;
+        self.wpTitle = title;
+        self.wpDescription = description;
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error);
