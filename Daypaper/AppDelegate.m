@@ -40,8 +40,9 @@
     self.toggleDownloadOnly.state = [[NSUserDefaults standardUserDefaults] integerForKey:@"DownloadOnly"];
 //    [self downloadWallpaper];
     
-    self.wallpaperTitle.stringValue = @"…";
-    self.wallpaperDescription.stringValue = @"…";
+    self.wlprTitle = @"…";
+    self.wlprDescription = @"…";
+    self.wlprPreviewURL = @"https://yandex.ru/images/today?size=480x480";
     [self getWallpaperInfo];
 }
 
@@ -65,6 +66,7 @@
     NSString *wpPath = [self makeWpFilepath];
     if (![self isWpExists:wpPath]) {
         
+        [self getWallpaperInfo];
         // If it's not then download new one
         [self downloadWallpaper];
     } else {
@@ -222,6 +224,11 @@
     self.toggleLoginItem.state = [mainBundle isLoginItemEnabled] ? NSOnState : NSOffState;
 }
 
+//- (IBAction)showPreview:(NSMenuItem *)sender {
+//    NSLog(@"Clicked");
+//    [self.previewPopover showRelativeToRect:[[sender view] frame] ofView:[sender view] preferredEdge:NSMinXEdge];
+//}
+
 - (void)toggleDownloadOnly:(id)sender {
     if (self.toggleDownloadOnly.state == NSOnState) {
         [self initWpTimer];
@@ -251,8 +258,8 @@
         
         NSLog(@"Got image: %@. %@", title, description);
         
-        self.wallpaperTitle.stringValue = title;
-        self.wallpaperDescription.stringValue = description;
+        self.wlprTitle= title;
+        self.wlprDescription = description;
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error);
@@ -278,4 +285,7 @@
     }
     return description;
 }
+
+ 
+
 @end

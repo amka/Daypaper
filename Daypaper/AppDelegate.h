@@ -8,20 +8,21 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate> {
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate, NSWindowDelegate> {
     NSString *image_path;
     NSTimer *wpTimer;
 }
 
 @property (strong) NSStatusItem *statusItem;
+@property (strong) NSString *wlprTitle;
+@property (strong) NSString *wlprDescription;
+@property (strong) NSString *wlprPreviewURL;
+
 @property (weak) IBOutlet NSMenu *statusMenu;
 
 @property (weak) IBOutlet NSMenuItem *revealInFinderItem;
 @property (weak) IBOutlet NSMenuItem *toggleDownloadOnly;
 @property (weak) IBOutlet NSMenuItem *toggleLoginItem;
-@property (weak) IBOutlet NSTextField *wallpaperTitle;
-@property (weak) IBOutlet NSTextField *wallpaperDescription;
-@property (weak) IBOutlet NSMenuItem *imageTitle;
 
 -(void)downloadWallpaper;
 -(void)setWallpaper:(NSString *)imagePath;
