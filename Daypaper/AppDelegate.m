@@ -40,8 +40,8 @@
     self.toggleDownloadOnly.state = [[NSUserDefaults standardUserDefaults] integerForKey:@"DownloadOnly"];
 //    [self downloadWallpaper];
     
-    self.wallpaperTitle.stringValue = @"…";
-    self.wallpaperDescription.stringValue = @"…";
+    self.wallpaperTitle = @"…";
+    self.wallpaperDescription = @"…";
     [self getWallpaperInfo];
 }
 
@@ -251,8 +251,8 @@
         
         NSLog(@"Got image: %@. %@", title, description);
         
-        self.wallpaperTitle.stringValue = title;
-        self.wallpaperDescription.stringValue = description;
+        self.wallpaperTitle = title;
+        self.wallpaperDescription = description;
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error);
