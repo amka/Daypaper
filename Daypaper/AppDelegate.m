@@ -11,6 +11,8 @@
 #import <AFHTTPRequestOperation.h>
 #import <NSBundle+LoginItem.h>
 
+NSString *const YANDEX_IMAGES = @"https://yandex.com/images/";
+
 
 @implementation AppDelegate
 
@@ -83,14 +85,14 @@
     }
 }
 
-// Download from http://yandex.ru/images/today?size=widthxheight
+// Download from https://yandex.com/images/today?size=widthxheight
 - (void)downloadWallpaper {
     
     self.revealInFinderItem.enabled = NO;
     
     NSRect frame = [[NSScreen mainScreen] frame];
     
-    NSURL *downloadUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://yandex.ru/images/today?size=%dx%d", (int)frame.size.width, (int)frame.size.height]];
+    NSURL *downloadUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@today?size=%dx%d", YANDEX_IMAGES, (int)frame.size.width, (int)frame.size.height]];
     NSURLRequest *downloadRequest = [NSURLRequest requestWithURL:downloadUrl];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:downloadRequest];
@@ -226,7 +228,7 @@
 }
 
 - (IBAction)viewOnYandex:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://yandex.ru/images/"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:YANDEX_IMAGES]];
 }
 
 - (void)toggleDownloadOnly:(id)sender {
@@ -243,7 +245,7 @@
 
 - (void)getWallpaperInfo {
     
-    NSURL *downloadUrl = [NSURL URLWithString:@"https://yandex.ru/images/"];
+    NSURL *downloadUrl = [NSURL URLWithString:YANDEX_IMAGES];
     NSURLRequest *downloadRequest = [NSURLRequest requestWithURL:downloadUrl];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:downloadRequest];
