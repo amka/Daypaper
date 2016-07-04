@@ -26,7 +26,7 @@
     self.statusItem.menu = self.statusMenu;
     
     // DevMate Kit Install
-    [DevMateKit sendTrackingReport:nil delegate:nil];
+//    [DevMateKit sendTrackingReport:nil delegate:nil];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
