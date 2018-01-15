@@ -22,10 +22,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
-        initStatusMenu()
+        // First of all we should define defaults values
+        initDefaults()
         loadUserDefaults()
+        
+        // After that we may create UI and initialilze application
+        initStatusMenu()
         initDownloadFolder()
-        initWpTimer()
+        
+        // Finally we should init timer
     }
     
     func initStatusMenu() {
@@ -35,6 +40,16 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         statusItem.image = NSImage.init(imageLiteralResourceName: "StatusIcon")
         statusItem.alternateImage = NSImage.init(imageLiteralResourceName: "StatusIconInv")
         statusItem.highlightMode = true
+    }
+    
+    func initDefaults() {
+        var initialDefaults = [String:Any]()
+        initialDefaults["check_interval"] = 3600.0
+        initialDefaults["show_notifications"] = true
+        initialDefaults["start_at_login"] = false
+        initialDefaults["download_only"] = false
+ 
+        NSUserDefaultsController.shared.defaults.register(defaults: initialDefaults)
     }
     
     func loadUserDefaults() {
