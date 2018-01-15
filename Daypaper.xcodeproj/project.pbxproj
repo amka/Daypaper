@@ -3,175 +3,137 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A243B4B1BA5709900277349 /* NSString+BetweenTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A243B4A1BA5709900277349 /* NSString+BetweenTags.m */; };
-		2AC74C761ABEFC180038FCBE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2AC74C781ABEFC180038FCBE /* Credits.rtf */; };
-		2AC74C7C1ABEFD370038FCBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AC74C7E1ABEFD370038FCBE /* Localizable.strings */; };
-		2AE290C41AB86C2300DAC95B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE290C31AB86C2300DAC95B /* AppDelegate.m */; };
-		2AE290C61AB86C2300DAC95B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE290C51AB86C2300DAC95B /* main.m */; };
-		2AE290C81AB86C2300DAC95B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE290C71AB86C2300DAC95B /* Images.xcassets */; };
-		2AE290CB1AB86C2300DAC95B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE290C91AB86C2300DAC95B /* MainMenu.xib */; };
-		2AE290D71AB86C2300DAC95B /* DaypaperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE290D61AB86C2300DAC95B /* DaypaperTests.m */; };
-		63F72AC3831C42A735790D1B /* libPods-DaypaperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC889E226AB9757E8C6B07B /* libPods-DaypaperTests.a */; };
-		EE3A8650E9750A8F9287CCB9 /* libPods-Daypaper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C6D04EAC423E5101CD0F46 /* libPods-Daypaper.a */; };
+		66B76929200CBAD10073AD5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B76928200CBAD10073AD5C /* AppDelegate.swift */; };
+		66B7692B200CBAD10073AD5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B7692A200CBAD10073AD5C /* Assets.xcassets */; };
+		66B7692E200CBAD10073AD5C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B7692C200CBAD10073AD5C /* MainMenu.xib */; };
+		66B7693A200CBAD10073AD5C /* DaypaperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B76939200CBAD10073AD5C /* DaypaperTests.swift */; };
+		66B76945200CBAD10073AD5C /* DaypaperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B76944200CBAD10073AD5C /* DaypaperUITests.swift */; };
+		66B76953200CBBA20073AD5C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B76952200CBBA20073AD5C /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2AE290D11AB86C2300DAC95B /* PBXContainerItemProxy */ = {
+		66B76936200CBAD10073AD5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2AE290B51AB86C2300DAC95B /* Project object */;
+			containerPortal = 66B7691D200CBAD10073AD5C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2AE290BC1AB86C2300DAC95B;
+			remoteGlobalIDString = 66B76924200CBAD10073AD5C;
+			remoteInfo = Daypaper;
+		};
+		66B76941200CBAD10073AD5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66B7691D200CBAD10073AD5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66B76924200CBAD10073AD5C;
 			remoteInfo = Daypaper;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F556347323C57E37016DC6C /* Pods-DaypaperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaypaperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DaypaperTests/Pods-DaypaperTests.debug.xcconfig"; sourceTree = "<group>"; };
-		28C6D04EAC423E5101CD0F46 /* libPods-Daypaper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Daypaper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A0C10BD1D29D2F00024332E /* Daypaper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Daypaper.entitlements; sourceTree = "<group>"; };
-		2A243B491BA5709900277349 /* NSString+BetweenTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BetweenTags.h"; sourceTree = "<group>"; };
-		2A243B4A1BA5709900277349 /* NSString+BetweenTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BetweenTags.m"; sourceTree = "<group>"; };
-		2AC74C771ABEFC180038FCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Base; path = Base.lproj/Credits.rtf; sourceTree = "<group>"; };
-		2AC74C791ABEFC1A0038FCBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
-		2AC74C7D1ABEFD370038FCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2AC74C7F1ABEFDBA0038FCBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2AD9B3661AD9E4D600E901D3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		2AE290BD1AB86C2300DAC95B /* Daypaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daypaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2AE290C11AB86C2300DAC95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2AE290C21AB86C2300DAC95B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2AE290C31AB86C2300DAC95B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2AE290C51AB86C2300DAC95B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2AE290C71AB86C2300DAC95B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2AE290CA1AB86C2300DAC95B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		2AE290D01AB86C2300DAC95B /* DaypaperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaypaperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2AE290D51AB86C2300DAC95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2AE290D61AB86C2300DAC95B /* DaypaperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaypaperTests.m; sourceTree = "<group>"; };
-		5AD32A5D7D5C7020344A5A77 /* Pods-Daypaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daypaper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daypaper/Pods-Daypaper.release.xcconfig"; sourceTree = "<group>"; };
-		5FC889E226AB9757E8C6B07B /* libPods-DaypaperTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DaypaperTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AACA599A1708C6E0763CD47 /* Pods-Daypaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daypaper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daypaper/Pods-Daypaper.debug.xcconfig"; sourceTree = "<group>"; };
-		92DEE3C2E8FC92E4C2EEE3D9 /* Pods-DaypaperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaypaperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DaypaperTests/Pods-DaypaperTests.release.xcconfig"; sourceTree = "<group>"; };
+		66B76925200CBAD10073AD5C /* Daypaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daypaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B76928200CBAD10073AD5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		66B7692A200CBAD10073AD5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66B7692D200CBAD10073AD5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		66B7692F200CBAD10073AD5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B76930200CBAD10073AD5C /* Daypaper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Daypaper.entitlements; sourceTree = "<group>"; };
+		66B76935200CBAD10073AD5C /* DaypaperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaypaperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B76939200CBAD10073AD5C /* DaypaperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaypaperTests.swift; sourceTree = "<group>"; };
+		66B7693B200CBAD10073AD5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B76940200CBAD10073AD5C /* DaypaperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaypaperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B76944200CBAD10073AD5C /* DaypaperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaypaperUITests.swift; sourceTree = "<group>"; };
+		66B76946200CBAD10073AD5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B76952200CBBA20073AD5C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2AE290BA1AB86C2300DAC95B /* Frameworks */ = {
+		66B76922200CBAD10073AD5C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE3A8650E9750A8F9287CCB9 /* libPods-Daypaper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2AE290CD1AB86C2300DAC95B /* Frameworks */ = {
+		66B76932200CBAD10073AD5C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63F72AC3831C42A735790D1B /* libPods-DaypaperTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B7693D200CBAD10073AD5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2AE290B41AB86C2300DAC95B = {
+		66B7691C200CBAD10073AD5C = {
 			isa = PBXGroup;
 			children = (
-				2AE290BF1AB86C2300DAC95B /* Daypaper */,
-				2AE290D31AB86C2300DAC95B /* DaypaperTests */,
-				2AE290BE1AB86C2300DAC95B /* Products */,
-				FA83FD3A33499179FB52F724 /* Pods */,
-				ED62A9E217C2BAC10AA3FA41 /* Frameworks */,
+				66B76927200CBAD10073AD5C /* Daypaper */,
+				66B76938200CBAD10073AD5C /* DaypaperTests */,
+				66B76943200CBAD10073AD5C /* DaypaperUITests */,
+				66B76926200CBAD10073AD5C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2AE290BE1AB86C2300DAC95B /* Products */ = {
+		66B76926200CBAD10073AD5C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2AE290BD1AB86C2300DAC95B /* Daypaper.app */,
-				2AE290D01AB86C2300DAC95B /* DaypaperTests.xctest */,
+				66B76925200CBAD10073AD5C /* Daypaper.app */,
+				66B76935200CBAD10073AD5C /* DaypaperTests.xctest */,
+				66B76940200CBAD10073AD5C /* DaypaperUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2AE290BF1AB86C2300DAC95B /* Daypaper */ = {
+		66B76927200CBAD10073AD5C /* Daypaper */ = {
 			isa = PBXGroup;
 			children = (
-				2A0C10BD1D29D2F00024332E /* Daypaper.entitlements */,
-				2A243B491BA5709900277349 /* NSString+BetweenTags.h */,
-				2A243B4A1BA5709900277349 /* NSString+BetweenTags.m */,
-				2AE290C21AB86C2300DAC95B /* AppDelegate.h */,
-				2AE290C31AB86C2300DAC95B /* AppDelegate.m */,
-				2AE290C71AB86C2300DAC95B /* Images.xcassets */,
-				2AE290C91AB86C2300DAC95B /* MainMenu.xib */,
-				2AE290C01AB86C2300DAC95B /* Supporting Files */,
+				66B76952200CBBA20073AD5C /* Images.xcassets */,
+				66B76928200CBAD10073AD5C /* AppDelegate.swift */,
+				66B7692A200CBAD10073AD5C /* Assets.xcassets */,
+				66B7692C200CBAD10073AD5C /* MainMenu.xib */,
+				66B7692F200CBAD10073AD5C /* Info.plist */,
+				66B76930200CBAD10073AD5C /* Daypaper.entitlements */,
 			);
 			path = Daypaper;
 			sourceTree = "<group>";
 		};
-		2AE290C01AB86C2300DAC95B /* Supporting Files */ = {
+		66B76938200CBAD10073AD5C /* DaypaperTests */ = {
 			isa = PBXGroup;
 			children = (
-				2AE290C11AB86C2300DAC95B /* Info.plist */,
-				2AE290C51AB86C2300DAC95B /* main.m */,
-				2AC74C781ABEFC180038FCBE /* Credits.rtf */,
-				2AC74C7E1ABEFD370038FCBE /* Localizable.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2AE290D31AB86C2300DAC95B /* DaypaperTests */ = {
-			isa = PBXGroup;
-			children = (
-				2AE290D61AB86C2300DAC95B /* DaypaperTests.m */,
-				2AE290D41AB86C2300DAC95B /* Supporting Files */,
+				66B76939200CBAD10073AD5C /* DaypaperTests.swift */,
+				66B7693B200CBAD10073AD5C /* Info.plist */,
 			);
 			path = DaypaperTests;
 			sourceTree = "<group>";
 		};
-		2AE290D41AB86C2300DAC95B /* Supporting Files */ = {
+		66B76943200CBAD10073AD5C /* DaypaperUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2AE290D51AB86C2300DAC95B /* Info.plist */,
+				66B76944200CBAD10073AD5C /* DaypaperUITests.swift */,
+				66B76946200CBAD10073AD5C /* Info.plist */,
 			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		ED62A9E217C2BAC10AA3FA41 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				28C6D04EAC423E5101CD0F46 /* libPods-Daypaper.a */,
-				5FC889E226AB9757E8C6B07B /* libPods-DaypaperTests.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FA83FD3A33499179FB52F724 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7AACA599A1708C6E0763CD47 /* Pods-Daypaper.debug.xcconfig */,
-				5AD32A5D7D5C7020344A5A77 /* Pods-Daypaper.release.xcconfig */,
-				1F556347323C57E37016DC6C /* Pods-DaypaperTests.debug.xcconfig */,
-				92DEE3C2E8FC92E4C2EEE3D9 /* Pods-DaypaperTests.release.xcconfig */,
-			);
-			name = Pods;
+			path = DaypaperUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2AE290BC1AB86C2300DAC95B /* Daypaper */ = {
+		66B76924200CBAD10073AD5C /* Daypaper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2AE290DA1AB86C2300DAC95B /* Build configuration list for PBXNativeTarget "Daypaper" */;
+			buildConfigurationList = 66B76949200CBAD10073AD5C /* Build configuration list for PBXNativeTarget "Daypaper" */;
 			buildPhases = (
-				A9C0CA0528B475AFA28DE73C /* [CP] Check Pods Manifest.lock */,
-				2AE290B91AB86C2300DAC95B /* Sources */,
-				2AE290BA1AB86C2300DAC95B /* Frameworks */,
-				2AE290BB1AB86C2300DAC95B /* Resources */,
-				BC38AA5AB198EFE1AA499E61 /* [CP] Embed Pods Frameworks */,
-				0E69F7632250FDA05760C927 /* [CP] Copy Pods Resources */,
+				66B76921200CBAD10073AD5C /* Sources */,
+				66B76922200CBAD10073AD5C /* Frameworks */,
+				66B76923200CBAD10073AD5C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -179,87 +141,110 @@
 			);
 			name = Daypaper;
 			productName = Daypaper;
-			productReference = 2AE290BD1AB86C2300DAC95B /* Daypaper.app */;
+			productReference = 66B76925200CBAD10073AD5C /* Daypaper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2AE290CF1AB86C2300DAC95B /* DaypaperTests */ = {
+		66B76934200CBAD10073AD5C /* DaypaperTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2AE290DD1AB86C2300DAC95B /* Build configuration list for PBXNativeTarget "DaypaperTests" */;
+			buildConfigurationList = 66B7694C200CBAD10073AD5C /* Build configuration list for PBXNativeTarget "DaypaperTests" */;
 			buildPhases = (
-				88540010918FD8A09CEB187B /* [CP] Check Pods Manifest.lock */,
-				2AE290CC1AB86C2300DAC95B /* Sources */,
-				2AE290CD1AB86C2300DAC95B /* Frameworks */,
-				2AE290CE1AB86C2300DAC95B /* Resources */,
-				A30C181AB1D0D4FEDCFB4547 /* [CP] Embed Pods Frameworks */,
-				50448D87C87371F912F408AF /* [CP] Copy Pods Resources */,
+				66B76931200CBAD10073AD5C /* Sources */,
+				66B76932200CBAD10073AD5C /* Frameworks */,
+				66B76933200CBAD10073AD5C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2AE290D21AB86C2300DAC95B /* PBXTargetDependency */,
+				66B76937200CBAD10073AD5C /* PBXTargetDependency */,
 			);
 			name = DaypaperTests;
 			productName = DaypaperTests;
-			productReference = 2AE290D01AB86C2300DAC95B /* DaypaperTests.xctest */;
+			productReference = 66B76935200CBAD10073AD5C /* DaypaperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66B7693F200CBAD10073AD5C /* DaypaperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66B7694F200CBAD10073AD5C /* Build configuration list for PBXNativeTarget "DaypaperUITests" */;
+			buildPhases = (
+				66B7693C200CBAD10073AD5C /* Sources */,
+				66B7693D200CBAD10073AD5C /* Frameworks */,
+				66B7693E200CBAD10073AD5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66B76942200CBAD10073AD5C /* PBXTargetDependency */,
+			);
+			name = DaypaperUITests;
+			productName = DaypaperUITests;
+			productReference = 66B76940200CBAD10073AD5C /* DaypaperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2AE290B51AB86C2300DAC95B /* Project object */ = {
+		66B7691D200CBAD10073AD5C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "Andrey M";
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Maksimov Andrey Aleksandrovich";
 				TargetAttributes = {
-					2AE290BC1AB86C2300DAC95B = {
-						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 5ZP3JBY5FU;
-						SystemCapabilities = {
-							com.apple.Sandbox = {
-								enabled = 1;
-							};
-						};
+					66B76924200CBAD10073AD5C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
-					2AE290CF1AB86C2300DAC95B = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 2AE290BC1AB86C2300DAC95B;
+					66B76934200CBAD10073AD5C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 66B76924200CBAD10073AD5C;
+					};
+					66B7693F200CBAD10073AD5C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 66B76924200CBAD10073AD5C;
 					};
 				};
 			};
-			buildConfigurationList = 2AE290B81AB86C2300DAC95B /* Build configuration list for PBXProject "Daypaper" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = 66B76920200CBAD10073AD5C /* Build configuration list for PBXProject "Daypaper" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
-				ru,
 			);
-			mainGroup = 2AE290B41AB86C2300DAC95B;
-			productRefGroup = 2AE290BE1AB86C2300DAC95B /* Products */;
+			mainGroup = 66B7691C200CBAD10073AD5C;
+			productRefGroup = 66B76926200CBAD10073AD5C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2AE290BC1AB86C2300DAC95B /* Daypaper */,
-				2AE290CF1AB86C2300DAC95B /* DaypaperTests */,
+				66B76924200CBAD10073AD5C /* Daypaper */,
+				66B76934200CBAD10073AD5C /* DaypaperTests */,
+				66B7693F200CBAD10073AD5C /* DaypaperUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2AE290BB1AB86C2300DAC95B /* Resources */ = {
+		66B76923200CBAD10073AD5C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AC74C7C1ABEFD370038FCBE /* Localizable.strings in Resources */,
-				2AE290C81AB86C2300DAC95B /* Images.xcassets in Resources */,
-				2AE290CB1AB86C2300DAC95B /* MainMenu.xib in Resources */,
-				2AC74C761ABEFC180038FCBE /* Credits.rtf in Resources */,
+				66B76953200CBBA20073AD5C /* Images.xcassets in Resources */,
+				66B7692B200CBAD10073AD5C /* Assets.xcassets in Resources */,
+				66B7692E200CBAD10073AD5C /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2AE290CE1AB86C2300DAC95B /* Resources */ = {
+		66B76933200CBAD10073AD5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B7693E200CBAD10073AD5C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,152 +253,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0E69F7632250FDA05760C927 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daypaper/Pods-Daypaper-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		50448D87C87371F912F408AF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DaypaperTests/Pods-DaypaperTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		88540010918FD8A09CEB187B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A30C181AB1D0D4FEDCFB4547 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DaypaperTests/Pods-DaypaperTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A9C0CA0528B475AFA28DE73C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BC38AA5AB198EFE1AA499E61 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daypaper/Pods-Daypaper-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		2AE290B91AB86C2300DAC95B /* Sources */ = {
+		66B76921200CBAD10073AD5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE290C61AB86C2300DAC95B /* main.m in Sources */,
-				2A243B4B1BA5709900277349 /* NSString+BetweenTags.m in Sources */,
-				2AE290C41AB86C2300DAC95B /* AppDelegate.m in Sources */,
+				66B76929200CBAD10073AD5C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2AE290CC1AB86C2300DAC95B /* Sources */ = {
+		66B76931200CBAD10073AD5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE290D71AB86C2300DAC95B /* DaypaperTests.m in Sources */,
+				66B7693A200CBAD10073AD5C /* DaypaperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B7693C200CBAD10073AD5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B76945200CBAD10073AD5C /* DaypaperUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2AE290D21AB86C2300DAC95B /* PBXTargetDependency */ = {
+		66B76937200CBAD10073AD5C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2AE290BC1AB86C2300DAC95B /* Daypaper */;
-			targetProxy = 2AE290D11AB86C2300DAC95B /* PBXContainerItemProxy */;
+			target = 66B76924200CBAD10073AD5C /* Daypaper */;
+			targetProxy = 66B76936200CBAD10073AD5C /* PBXContainerItemProxy */;
+		};
+		66B76942200CBAD10073AD5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66B76924200CBAD10073AD5C /* Daypaper */;
+			targetProxy = 66B76941200CBAD10073AD5C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2AC74C781ABEFC180038FCBE /* Credits.rtf */ = {
+		66B7692C200CBAD10073AD5C /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2AC74C771ABEFC180038FCBE /* Base */,
-				2AC74C791ABEFC1A0038FCBE /* ru */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		2AC74C7E1ABEFD370038FCBE /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2AC74C7D1ABEFD370038FCBE /* Base */,
-				2AC74C7F1ABEFDBA0038FCBE /* ru */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		2AE290C91AB86C2300DAC95B /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2AE290CA1AB86C2300DAC95B /* Base */,
-				2AD9B3661AD9E4D600E901D3 /* ru */,
+				66B7692D200CBAD10073AD5C /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -421,188 +305,250 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2AE290D81AB86C2300DAC95B /* Debug */ = {
+		66B76947200CBAD10073AD5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		2AE290D91AB86C2300DAC95B /* Release */ = {
+		66B76948200CBAD10073AD5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
-		2AE290DB1AB86C2300DAC95B /* Debug */ = {
+		66B7694A200CBAD10073AD5C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AACA599A1708C6E0763CD47 /* Pods-Daypaper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = DaypaperIcon;
 				CODE_SIGN_ENTITLEMENTS = Daypaper/Daypaper.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				DEVELOPMENT_TEAM = 5ZP3JBY5FU;
 				INFOPLIST_FILE = Daypaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.meamka.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = me.meamka.Daypaper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
-		2AE290DC1AB86C2300DAC95B /* Release */ = {
+		66B7694B200CBAD10073AD5C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AD32A5D7D5C7020344A5A77 /* Pods-Daypaper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = DaypaperIcon;
 				CODE_SIGN_ENTITLEMENTS = Daypaper/Daypaper.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				DEVELOPMENT_TEAM = 5ZP3JBY5FU;
 				INFOPLIST_FILE = Daypaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.meamka.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = me.meamka.Daypaper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
-		2AE290DE1AB86C2300DAC95B /* Debug */ = {
+		66B7694D200CBAD10073AD5C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F556347323C57E37016DC6C /* Pods-DaypaperTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				DEVELOPMENT_TEAM = 5ZP3JBY5FU;
 				INFOPLIST_FILE = DaypaperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.meamka.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = me.meamka.DaypaperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Daypaper.app/Contents/MacOS/Daypaper";
 			};
 			name = Debug;
 		};
-		2AE290DF1AB86C2300DAC95B /* Release */ = {
+		66B7694E200CBAD10073AD5C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92DEE3C2E8FC92E4C2EEE3D9 /* Pods-DaypaperTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
+				DEVELOPMENT_TEAM = 5ZP3JBY5FU;
 				INFOPLIST_FILE = DaypaperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.meamka.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = me.meamka.DaypaperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Daypaper.app/Contents/MacOS/Daypaper";
+			};
+			name = Release;
+		};
+		66B76950200CBAD10073AD5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5ZP3JBY5FU;
+				INFOPLIST_FILE = DaypaperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.meamka.DaypaperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Daypaper;
+			};
+			name = Debug;
+		};
+		66B76951200CBAD10073AD5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5ZP3JBY5FU;
+				INFOPLIST_FILE = DaypaperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.meamka.DaypaperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Daypaper;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2AE290B81AB86C2300DAC95B /* Build configuration list for PBXProject "Daypaper" */ = {
+		66B76920200CBAD10073AD5C /* Build configuration list for PBXProject "Daypaper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2AE290D81AB86C2300DAC95B /* Debug */,
-				2AE290D91AB86C2300DAC95B /* Release */,
+				66B76947200CBAD10073AD5C /* Debug */,
+				66B76948200CBAD10073AD5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2AE290DA1AB86C2300DAC95B /* Build configuration list for PBXNativeTarget "Daypaper" */ = {
+		66B76949200CBAD10073AD5C /* Build configuration list for PBXNativeTarget "Daypaper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2AE290DB1AB86C2300DAC95B /* Debug */,
-				2AE290DC1AB86C2300DAC95B /* Release */,
+				66B7694A200CBAD10073AD5C /* Debug */,
+				66B7694B200CBAD10073AD5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2AE290DD1AB86C2300DAC95B /* Build configuration list for PBXNativeTarget "DaypaperTests" */ = {
+		66B7694C200CBAD10073AD5C /* Build configuration list for PBXNativeTarget "DaypaperTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2AE290DE1AB86C2300DAC95B /* Debug */,
-				2AE290DF1AB86C2300DAC95B /* Release */,
+				66B7694D200CBAD10073AD5C /* Debug */,
+				66B7694E200CBAD10073AD5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66B7694F200CBAD10073AD5C /* Build configuration list for PBXNativeTarget "DaypaperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66B76950200CBAD10073AD5C /* Debug */,
+				66B76951200CBAD10073AD5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2AE290B51AB86C2300DAC95B /* Project object */;
+	rootObject = 66B7691D200CBAD10073AD5C /* Project object */;
 }

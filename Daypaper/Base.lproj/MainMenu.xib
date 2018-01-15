@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -11,15 +10,12 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+        <customObject id="-3" userLabel="Application"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Daypaper" customModuleProvider="target">
             <connections>
-                <outlet property="imageTitle" destination="6sK-pj-Hjw" id="p9V-4M-PnK"/>
-                <outlet property="revealInFinderItem" destination="weK-PC-bpE" id="M61-m9-MN2"/>
-                <outlet property="statusMenu" destination="jJO-us-g56" id="QyC-O0-Y2l"/>
-                <outlet property="toggleDownloadOnly" destination="eyI-hM-Zsn" id="ImO-2w-PNX"/>
-                <outlet property="toggleLoginItem" destination="cEN-gU-3dl" id="kwp-IQ-em3"/>
-                <outlet property="wallpaperTitle" destination="6sK-pj-Hjw" id="ajH-sP-FcN"/>
+                <outlet property="StatusMenu" destination="JSW-aE-X8g" id="RTL-q2-bPL"/>
+                <outlet property="downloadTodayClicked" destination="x1g-0q-VRF" id="hFO-QE-Tv8"/>
+                <outlet property="photoLabel" destination="1ze-Do-s3u" id="gCW-Ta-YbO"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -112,8 +108,7 @@
                                     <action selector="saveDocumentAs:" target="-1" id="mDf-zr-I0C"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Revert to Saved" id="KaW-ft-85H">
-                                <modifierMask key="keyEquivalentModifierMask"/>
+                            <menuItem title="Revert to Saved" keyEquivalent="r" id="KaW-ft-85H">
                                 <connections>
                                     <action selector="revertDocumentToSaved:" target="-1" id="iJ3-Pv-kwq"/>
                                 </connections>
@@ -630,6 +625,19 @@
                                     <action selector="runToolbarCustomizationPalette:" target="-1" id="pQI-g3-MTW"/>
                                 </connections>
                             </menuItem>
+                            <menuItem isSeparatorItem="YES" id="hB3-LF-h0Y"/>
+                            <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                <connections>
+                                    <action selector="toggleSourceList:" target="-1" id="iwa-gc-5KM"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                <connections>
+                                    <action selector="toggleFullScreen:" target="-1" id="dU3-MA-1Rq"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>
@@ -671,64 +679,61 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="200" y="-69"/>
         </menu>
-        <menu id="jJO-us-g56">
+        <menu id="JSW-aE-X8g" userLabel="StatusMenu">
             <items>
-                <menuItem title="Title" enabled="NO" id="6sK-pj-Hjw">
+                <menuItem title="Photo label" id="1ze-Do-s3u">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="Ozu-61-Hel"/>
+                <menuItem title="View on Yandex" id="UaJ-1S-TgP">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="ryF-io-WN3"/>
+                <menuItem title="Download today" id="x1g-0q-VRF">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <binding destination="Voe-Tx-rLC" name="title" keyPath="self.wpTitle" id="B0E-aa-h72"/>
+                        <action selector="downloadTodayClicked:" target="Voe-Tx-rLC" id="FMi-nx-ANw"/>
                     </connections>
                 </menuItem>
-                <menuItem isSeparatorItem="YES" id="KI5-7a-suE"/>
-                <menuItem title="View on Yandex" id="eHN-B9-Ppy">
+                <menuItem title="Reveal in Finder" id="Yun-DK-CLy">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="5pR-xc-J0b"/>
+                <menuItem title="Download only" id="HhK-9k-VWg">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="viewOnYandex:" target="Voe-Tx-rLC" id="0Em-6P-Fxd"/>
+                        <binding destination="0KA-z6-HBD" name="value" keyPath="values.download_only" id="yAW-YM-R9a">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                            </dictionary>
+                        </binding>
                     </connections>
                 </menuItem>
-                <menuItem isSeparatorItem="YES" id="Dy4-gl-3rv"/>
-                <menuItem title="Download today" id="8UQ-dL-8vx">
+                <menuItem title="Start on login" id="ATq-DE-6t5">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="downloadClicked:" target="Voe-Tx-rLC" id="dJG-iM-tCm"/>
+                        <binding destination="0KA-z6-HBD" name="value" keyPath="values.strt_at_login" id="g4K-gl-4ky">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                            </dictionary>
+                        </binding>
                     </connections>
                 </menuItem>
-                <menuItem title="Reveal in Finder" id="weK-PC-bpE">
+                <menuItem isSeparatorItem="YES" id="4hN-nD-VTf"/>
+                <menuItem title="About  Daypaper" id="Nkl-kZ-seC">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="revealInFinderClicked:" target="Voe-Tx-rLC" id="jYt-PJ-5pd"/>
-                    </connections>
                 </menuItem>
-                <menuItem isSeparatorItem="YES" id="gO6-n7-VzH"/>
-                <menuItem title="Download only" id="eyI-hM-Zsn">
+                <menuItem title="Quit" id="uGI-JD-0WX">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="toggleDownloadOnly:" target="Voe-Tx-rLC" id="hF9-d7-Il3"/>
-                    </connections>
-                </menuItem>
-                <menuItem title="Start on login" id="cEN-gU-3dl">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="toggleLoginItem:" target="Voe-Tx-rLC" id="YoH-m1-XSQ"/>
-                    </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="3xs-wV-Ncz"/>
-                <menuItem title="About Daypaper" id="1B6-nY-b3t">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="orderFrontStandardAboutPanel:" target="-1" id="OYk-cv-e72"/>
-                    </connections>
-                </menuItem>
-                <menuItem title="Quit" id="hJg-cK-cEY">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="terminate:" target="-2" id="0lq-an-ae4"/>
+                        <action selector="terminate:" target="-2" id="fzK-Yi-YoR"/>
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="142" y="317.5"/>
+            <point key="canvasLocation" x="89" y="73"/>
         </menu>
-        <userDefaultsController representsSharedInstance="YES" id="RRN-XQ-v2m"/>
+        <userDefaultsController representsSharedInstance="YES" id="0KA-z6-HBD"/>
     </objects>
 </document>
