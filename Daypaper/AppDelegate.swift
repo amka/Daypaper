@@ -57,7 +57,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     }
     
     func initWpTimer() {
-        wpTimer = Timer.scheduledTimer(timeInterval: 10,
+        wpTimer = Timer.scheduledTimer(timeInterval: prefs.double(forKey: "check_interval"),
                                        target: self,
                                        selector: (#selector(checkWallpaper)),
                                        userInfo: nil,
@@ -79,6 +79,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         if (prefs.string(forKey: "download_folder") == nil)
         {
             print("Should create or select download folder")
+            
             let notification = NSUserNotification.init()
             notification.title = "Daypaper"
             notification.informativeText = "Download folder not set"
@@ -92,7 +93,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             NSUserNotificationCenter.default.deliver(notification)
             
         } else {
-            FileManager.default.isWritableFile(atPath: prefs.string(forKey: "download_folder")!)
+            if (FileManager.default.isWritableFile(atPath: prefs.string(forKey: "download_folder")!)) {
+                initWpTimer()
+            } else {
+                let notification = NSUserNotification.init()
+                notification.title = "Daypaper"
+                notification.informativeText = "Download folder are not writable"
+                notification.actionButtonTitle = "Use Default"
+                notification.otherButtonTitle = "Select another"
+                notification.hasActionButton = true
+                notification.hasReplyButton = true
+                notification.soundName = "Glass"
+                notification.userInfo = ["action": "download_folder"]
+                NSUserNotificationCenter.default.delegate = self
+                NSUserNotificationCenter.default.deliver(notification)
+            }
         }
     }
     
@@ -102,17 +117,17 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
                 guard let res = notification.response else { return }
                 print("User replied: \(res.string)")
             default:
-                print("userInfo -> \(notification.userInfo!)")
+                print("didActivate userInfo -> \(notification.userInfo!)")
                 break;
         }
     }
     
     func userNotificationCenter(_ center: NSUserNotificationCenter, didDeliver notification: NSUserNotification) {
-        print("userInfo -> \(notification.userInfo!)")
+        print("didDeliver userInfo -> \(notification.userInfo!)")
     }
     
     func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
-        return prefs.bool(forKey: "showNotifications") != false
+        return prefs.bool(forKey: "show_notifications") != false
     }
     
     @objc func checkWallpaper() {
@@ -120,11 +135,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     }
     
     func downloadImage() {
-       print("Begin download wallpaper…")
+        NSScreen.screens.forEach { (screen) in
+            print("Begin download wallpaper for \(getScreenSize(screen: screen))")
+            applyWallpaper(screen: screen)
+        }
     }
     
-    func applyWallpaper() {
-        
+    func applyWallpaper(screen: NSScreen) {
+        print("Applying wallpaper to \(getScreenSize(screen: screen))")
+    }
+    
+    func getScreenSize(screen: NSScreen) -> (Int, Int) {
+        return (Int(screen.frame.width), Int(screen.frame.height))
     }
 }
 
