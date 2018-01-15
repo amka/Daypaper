@@ -124,10 +124,42 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     func userNotificationCenter(_ center: NSUserNotificationCenter, didDeliver notification: NSUserNotification) {
         print("didDeliver userInfo -> \(notification.userInfo!)")
+        if (notification.userInfo != nil) {
+            switch (notification.userInfo!["action"]) {
+            default:
+                let path = makeDefaultPath()
+                makeWallpaperFolder(path)
+                break;
+            }
+        }
     }
     
     func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
         return prefs.bool(forKey: "show_notifications") != false
+    }
+    
+    func makeDefaultPath() -> String {
+        var path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.picturesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] as String
+        path.append("/Daypaper")
+        print(path)
+//        prefs.set(path, forKey: "download_folder")
+        return path
+    }
+    
+    func makeWallpaperFolder(_ path: String) {
+        if (!FileManager.default.fileExists(atPath: path)) {
+            do {
+                try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true,
+                                                        attributes: nil)
+            } catch let error as NSError {
+                print(error.localizedDescription);
+                let note = NSUserNotification()
+                note.title = "Daypaper"
+                note.subtitle = NSLocalizedString("create_folder_error", comment: "")
+                note.informativeText = error.localizedDescription
+                NSUserNotificationCenter.default.deliver(note)
+            }
+        }
     }
     
     @objc func checkWallpaper() {
