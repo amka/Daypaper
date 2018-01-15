@@ -18,12 +18,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     var statusItem : NSStatusItem!
     var prefs : UserDefaults!
+    var wpTimer : Timer!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         initStatusMenu()
         loadUserDefaults()
         initDownloadFolder()
+        initWpTimer()
     }
     
     func initStatusMenu() {
@@ -38,9 +40,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     func loadUserDefaults() {
         prefs = NSUserDefaultsController.shared.defaults
     }
+    
+    func initWpTimer() {
+        wpTimer = Timer.scheduledTimer(timeInterval: 10,
+                                       target: self,
+                                       selector: (#selector(checkWallpaper)),
+                                       userInfo: nil,
+                                       repeats: true)
+    }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+        if (wpTimer != nil) {
+            wpTimer.invalidate()
+        }
     }
     
     @IBAction func downloadTodayClicked(_ sender: Any) {
@@ -87,8 +100,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         return prefs.bool(forKey: "showNotifications") != false
     }
     
+    @objc func checkWallpaper() {
+        print("Checking wallpaper…")
+    }
+    
     func downloadImage() {
-       print("Begin download wallpaper...")
+       print("Begin download wallpaper…")
     }
     
     func applyWallpaper() {
