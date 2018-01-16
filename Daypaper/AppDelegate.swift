@@ -7,20 +7,28 @@
 //
 
 import Cocoa
+
+import Fuzi
 import Nuke
 import SwiftDate
+import SwiftHTTP
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate, NSOpenSavePanelDelegate {
 
     @IBOutlet var StatusMenu: NSMenu!
-    @IBOutlet weak var photoLabel: NSMenuItem!
+    @IBOutlet weak var captionLabel: NSMenuItem!
+    @IBOutlet weak var descriptionLabel: NSMenuItem!
+    @IBOutlet weak var previewView: NSImageView!
     
     let BASE_URL: String = "https://yandex.com/images/"
     
     var statusItem : NSStatusItem!
     var prefs : UserDefaults!
     var wpTimer : Timer!
+    
+    var captionText = ""
+    var descriptionText = ""
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -30,10 +38,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         
         // After that we may create UI and initialilze application
         initStatusMenu()
+        
         initDownloadFolder()
         
         // Finally we should init timer
         initWpTimer()
+
+//        getPreview()
+//        getWallpaperMeta()
     }
     
     func initStatusMenu() {
@@ -67,6 +79,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
                                        userInfo: nil,
                                        repeats: true)
         print("WPTimer initialized with interval \(interval)")
+        wpTimer.fire()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -193,57 +206,63 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     }
     
     @objc func beginUpdateWallpaper() {
+        getWallpaperMeta()
         downloadImage(force: false)
     }
     
-    func checkWallpaper(localFilename: String) -> Bool {
+    func needDownload(localFilename: String) -> Bool {
         print("Checking wallpaper…")
-        if (!FileManager.default.fileExists(atPath: localFilename)) {
-            return true
-        } else {
-            NSLog("File %@ already exists.", localFilename)
+        if (FileManager.default.fileExists(atPath: localFilename)) {
+            print("File \(localFilename) already exists.")
             return false
         }
+        return true
     }
     
     func downloadImage(force: Bool?) {
-        NSScreen.screens.forEach { (screen) in
-            let (sWidth, sHeight) = getScreenSize(screen: screen)
-            let downloadURL = URL.init(string: "\(BASE_URL)today?size=\(sWidth)x\(sHeight)")
-            let localURL = URL.init(fileURLWithPath: makeLocalFilename(width: sWidth, height: sHeight))
-
-            print("Begin download wallpaper from \(downloadURL!)")
-            Manager.shared.loadImage(with: downloadURL!, completion: { (result) in
-                if(result.error != nil) {
-                    print(result.error!)
-                } else {
-                    let wp = result.value!
-                    do {
-                        try wp.tiffRepresentation?.write(to: localURL, options: Data.WritingOptions.atomicWrite)
-                        print("Saved to \(localURL.absoluteString)")
-                        
-                        if (self.prefs.bool(forKey: "download_only") == true) {
-                            self.applyWallpaper(screen: screen, wallpaperURL: localURL)
-                        }
-                        
-                    } catch let error as NSError {
-                        print(error.localizedDescription)
-                    }
-                }
-            })
+        let (sWidth, sHeight) = getScreenSize()
+        let downloadURL = URL.init(string: "\(BASE_URL)today?size=\(sWidth)x\(sHeight)")
+        let localURL = URL.init(fileURLWithPath: makeLocalFilename(width: sWidth, height: sHeight))
+        
+        if (!needDownload(localFilename: localURL.relativePath)) {
+            return
         }
+        
+        Manager.shared.loadImage(with: downloadURL!, completion: { (result) in
+            if(result.error != nil) {
+                print(result.error!)
+            } else {
+                let wp = result.value!
+                do {
+                    if let bits = wp.representations.first as? NSBitmapImageRep {
+                        let data = bits.representation(using: NSBitmapImageRep.FileType.jpeg, properties: [:])
+                        try data?.write(to: localURL)
+                        print("Saved to \(localURL.absoluteString)")
+                    }
+
+                    if (self.prefs.bool(forKey: "download_only") != true) {
+                        self.applyWallpaper(wallpaperURL: localURL)
+                    }
+
+                } catch let error as NSError {
+                    print(error.localizedDescription)
+                }
+            }
+        })
     }
     
     /**
-     Apply Wallpaper to given screen
+     Apply Wallpaper to every screen
     */
-    func applyWallpaper(screen: NSScreen, wallpaperURL: URL) {
-        print("Applying wallpaper to \(getScreenSize(screen: screen))")
-        
-        do {
-            try NSWorkspace.shared.setDesktopImageURL(wallpaperURL, for: screen, options: [:])
-        } catch let error as NSError {
-            print(error.localizedDescription)
+    func applyWallpaper(wallpaperURL: URL) {
+        NSScreen.screens.forEach { (screen) in
+            print("Applying wallpaper to \(getScreenSize())")
+            
+            do {
+                try NSWorkspace.shared.setDesktopImageURL(wallpaperURL, for: screen, options: [:])
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
         }
     }
     
@@ -255,15 +274,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
      
      - parameters:
         - screen: NSScreen object to detect attributes
-     
-     - author:
-     Andrey Maksimov
-     
-     - version:
-     0.1
     */
-    func getScreenSize(screen: NSScreen) -> (Int, Int) {
-        return (Int(screen.frame.width), Int(screen.frame.height))
+    func getScreenSize() -> (Int, Int) {
+        var maxWidth = 0
+        var maxHeight = 0
+        NSScreen.screens.forEach { (screen) in
+            let frameWidth = Int(screen.frame.width)
+            let frameHeight = Int(screen.frame.height)
+            
+            if (frameWidth > maxWidth) {
+                maxWidth = frameWidth
+                maxHeight = frameHeight
+            }
+        }
+        return (maxWidth, maxHeight)
     }
     
     @IBAction func viewOnYandexClicked(_ sender: Any) {
@@ -271,11 +295,59 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         NSWorkspace.shared.open(url)
     }
     
+    @IBAction func revealInFinder(_ sender: Any) {
+        let (width, height) = getScreenSize()
+        let wpURL = URL.init(fileURLWithPath: makeLocalFilename(width: width, height: height))
+        NSWorkspace.shared.activateFileViewerSelecting([wpURL])
+    }
+    
     func makeLocalFilename(width: Int, height: Int) -> String {
         let download_folder = prefs.string(forKey: "download_folder") ?? ""
         let date = DateInRegion()
         let dateString = date.string(format: .iso8601(options: .withFullDate))
         return "\(download_folder)/\(dateString)-\(width)x\(height).jpg"
+    }
+    
+    func getPreview() {
+        let url = URL.init(string: "\(BASE_URL)today?size=640x640")
+        Manager.shared.loadImage(with: url!, into: previewView)
+    }
+    
+    func getWallpaperMeta() {
+        var req = URLRequest(urlString: BASE_URL)!
+        req.timeoutInterval = 10.0
+        let task = HTTP(req)
+        task.onFinish = { response in
+            if let err = response.error {
+                print("error: \(err.localizedDescription)")
+                return //also notify app of failure as needed
+            }
+            
+            do {
+                let doc = try HTMLDocument(data: response.data)
+                
+                // CSS queries
+                if let elCaption = doc.firstChild(css: ".b-501px__name") {
+                    print("Caption: \(elCaption.stringValue)")
+                    self.captionText = elCaption.stringValue
+                }
+                
+                if let elDescription = doc.firstChild(css: ".b-501px__description") {
+                    print("Description: \(elDescription.stringValue)")
+                    self.descriptionText = elDescription.stringValue
+                }
+                
+                DispatchQueue.main.async {
+                    self.captionLabel.title = self.captionText
+                    self.descriptionLabel.title = self.descriptionText
+                }
+                
+            } catch let error {
+                print("Parse error -> \(error.localizedDescription)")
+            }
+        }
+        
+        task.run()
     }
 }
 

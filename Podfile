@@ -6,8 +6,10 @@ target 'Daypaper' do
   use_frameworks!
 
   # Pods for Daypaper
+  pod 'SwiftHTTP', '~> 3.0.1'
   pod 'Nuke', '~> 6.0'
   pod 'SwiftDate'
+  pod 'Fuzi', '~> 2.0.0'
 
   target 'DaypaperTests' do
     inherit! :search_paths

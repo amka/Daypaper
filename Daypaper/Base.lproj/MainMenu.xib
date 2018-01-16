@@ -15,8 +15,9 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Daypaper" customModuleProvider="target">
             <connections>
                 <outlet property="StatusMenu" destination="JSW-aE-X8g" id="RTL-q2-bPL"/>
+                <outlet property="captionLabel" destination="0ZZ-aN-8Qh" id="DYB-4e-9aR"/>
+                <outlet property="descriptionLabel" destination="B30-Pd-4hi" id="wCE-f4-G6A"/>
                 <outlet property="downloadTodayClicked" destination="x1g-0q-VRF" id="hFO-QE-Tv8"/>
-                <outlet property="photoLabel" destination="1ze-Do-s3u" id="gCW-Ta-YbO"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -684,7 +685,12 @@
         </menu>
         <menu id="JSW-aE-X8g" userLabel="StatusMenu">
             <items>
-                <menuItem title="Photo label" id="1ze-Do-s3u">
+                <menuItem title="Caption" id="0ZZ-aN-8Qh">
+                    <attributedString key="attributedTitle"/>
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Description" id="B30-Pd-4hi">
+                    <attributedString key="attributedTitle"/>
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="Ozu-61-Hel"/>
@@ -703,31 +709,16 @@
                 </menuItem>
                 <menuItem title="Reveal in Finder" id="Yun-DK-CLy">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="5pR-xc-J0b"/>
-                <menuItem title="Download only" id="HhK-9k-VWg">
-                    <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <binding destination="0KA-z6-HBD" name="value" keyPath="values.download_only" id="yAW-YM-R9a">
-                            <dictionary key="options">
-                                <string key="NSValueTransformerName">NSNegateBoolean</string>
-                            </dictionary>
-                        </binding>
-                    </connections>
-                </menuItem>
-                <menuItem title="Start on login" id="ATq-DE-6t5">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <binding destination="0KA-z6-HBD" name="value" keyPath="values.strt_at_login" id="g4K-gl-4ky">
-                            <dictionary key="options">
-                                <string key="NSValueTransformerName">NSNegateBoolean</string>
-                            </dictionary>
-                        </binding>
+                        <action selector="revealInFinder:" target="Voe-Tx-rLC" id="Os3-Qu-N3b"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="4hN-nD-VTf"/>
                 <menuItem title="About  Daypaper" id="Nkl-kZ-seC">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="orderFrontStandardAboutPanel:" target="-1" id="n3F-ks-PJM"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="Quit" id="uGI-JD-0WX">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -736,7 +727,7 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="86" y="137"/>
+            <point key="canvasLocation" x="211" y="78"/>
         </menu>
         <userDefaultsController representsSharedInstance="YES" id="0KA-z6-HBD"/>
     </objects>
