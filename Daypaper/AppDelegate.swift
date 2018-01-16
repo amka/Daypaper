@@ -312,7 +312,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         let download_folder = prefs.string(forKey: "download_folder") ?? ""
         let date = DateInRegion()
         let dateString = date.string(format: .iso8601(options: .withFullDate))
-        return "\(download_folder)/\(dateString)-\(width)x\(height).jpg"
+        return "\(download_folder)/\(dateString).jpg"
     }
     
     func getPreview() {
