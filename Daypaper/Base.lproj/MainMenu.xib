@@ -688,10 +688,16 @@
                 <menuItem title="Caption" id="0ZZ-aN-8Qh">
                     <attributedString key="attributedTitle"/>
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="viewOnYandexClicked:" target="Voe-Tx-rLC" id="hK0-hf-m4k"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="Description" id="B30-Pd-4hi">
                     <attributedString key="attributedTitle"/>
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="viewOnYandexClicked:" target="Voe-Tx-rLC" id="Pv8-dX-v4Q"/>
+                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="Ozu-61-Hel"/>
                 <menuItem title="View on Yandex" id="UaJ-1S-TgP">
@@ -700,13 +706,13 @@
                         <action selector="viewOnYandexClicked:" target="Voe-Tx-rLC" id="ndJ-xH-UTF"/>
                     </connections>
                 </menuItem>
-                <menuItem isSeparatorItem="YES" id="ryF-io-WN3"/>
-                <menuItem title="Download today" id="x1g-0q-VRF">
+                <menuItem title="Force Download" id="x1g-0q-VRF">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="downloadTodayClicked:" target="Voe-Tx-rLC" id="FMi-nx-ANw"/>
                     </connections>
                 </menuItem>
+                <menuItem isSeparatorItem="YES" id="ryF-io-WN3"/>
                 <menuItem title="Reveal in Finder" id="Yun-DK-CLy">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
