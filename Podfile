@@ -11,6 +11,9 @@ target 'Daypaper' do
   pod 'SwiftDate'
   pod 'Fuzi', '~> 2.0.0'
 
+  pod 'Fabric'
+  pod 'Crashlytics'
+
   target 'DaypaperTests' do
     inherit! :search_paths
     # Pods for testing

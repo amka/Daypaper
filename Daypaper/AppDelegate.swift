@@ -8,6 +8,9 @@
 
 import Cocoa
 
+import Fabric
+import Crashlytics
+
 import Fuzi
 import Nuke
 import SwiftDate
@@ -34,6 +37,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         // Insert code here to initialize your application
         // First of all we should define defaults values
         initDefaults()
+        
+        Fabric.with([Crashlytics.self, Answers.self])
         loadUserDefaults()
         
         // After that we may create UI and initialilze application
@@ -63,6 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         initialDefaults["show_notifications"] = true
         initialDefaults["start_at_login"] = false
         initialDefaults["download_only"] = false
+        initialDefaults["NSApplicationCrashOnExceptions"] = true
  
         NSUserDefaultsController.shared.defaults.register(defaults: initialDefaults)
     }
@@ -260,6 +266,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             
             do {
                 try NSWorkspace.shared.setDesktopImageURL(wallpaperURL, for: screen, options: [:])
+                Answers.logCustomEvent(withName: "WallpaperApplied", customAttributes: nil)
             } catch let error as NSError {
                 print(error.localizedDescription)
             }

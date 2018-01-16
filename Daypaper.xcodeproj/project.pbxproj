@@ -164,6 +164,7 @@
 				66B76923200CBAD10073AD5C /* Resources */,
 				77CB4B4180FB69946E7BE0D0 /* [CP] Embed Pods Frameworks */,
 				4DE1AADF0B39D59B1C7E8D98 /* [CP] Copy Pods Resources */,
+				66E437B3200E29E700204CD1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -205,6 +206,7 @@
 				66B7693E200CBAD10073AD5C /* Resources */,
 				B1333D825D69D0B4DBD30AC2 /* [CP] Embed Pods Frameworks */,
 				24A775DCD04E7C979066B488 /* [CP] Copy Pods Resources */,
+				66E437B2200E297900204CD1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -339,6 +341,32 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daypaper/Pods-Daypaper-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		66E437B2200E297900204CD1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" dae6eb31c0f72f2355c5d5dd490f997379aba780 b19f9c968eae88134caa8f59bdd00a55ce5fac9dcd8c750a69fe59257a27e27a";
+		};
+		66E437B3200E29E700204CD1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" dae6eb31c0f72f2355c5d5dd490f997379aba780 b19f9c968eae88134caa8f59bdd00a55ce5fac9dcd8c750a69fe59257a27e27a";
 		};
 		6EFB4C476D5230EE3050B01D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
