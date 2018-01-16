@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31B0E2158EF334A9FDEACBAC /* Pods_DaypaperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8B07355753223AF0E289BC2 /* Pods_DaypaperTests.framework */; };
 		66B76929200CBAD10073AD5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B76928200CBAD10073AD5C /* AppDelegate.swift */; };
 		66B7692B200CBAD10073AD5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B7692A200CBAD10073AD5C /* Assets.xcassets */; };
 		66B7692E200CBAD10073AD5C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B7692C200CBAD10073AD5C /* MainMenu.xib */; };
 		66B7693A200CBAD10073AD5C /* DaypaperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B76939200CBAD10073AD5C /* DaypaperTests.swift */; };
 		66B76945200CBAD10073AD5C /* DaypaperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B76944200CBAD10073AD5C /* DaypaperUITests.swift */; };
 		66B76953200CBBA20073AD5C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B76952200CBBA20073AD5C /* Images.xcassets */; };
+		A161C7E970C38B204B7ED8BA /* Pods_DaypaperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA041EFE2F2B1EFC1700AB14 /* Pods_DaypaperUITests.framework */; };
+		EADA5423B2C5C3D7D63566F3 /* Pods_Daypaper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614E94A440370A0B2DF9DC03 /* Pods_Daypaper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3DDAF1E3F3CE1969FECF0857 /* Pods-DaypaperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaypaperUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DaypaperUITests/Pods-DaypaperUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4DC96997126B6B6A335E4656 /* Pods-DaypaperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaypaperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DaypaperTests/Pods-DaypaperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5521FD7736C810B830CD45ED /* Pods-Daypaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daypaper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daypaper/Pods-Daypaper.debug.xcconfig"; sourceTree = "<group>"; };
+		614E94A440370A0B2DF9DC03 /* Pods_Daypaper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daypaper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B76925200CBAD10073AD5C /* Daypaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daypaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B76928200CBAD10073AD5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66B7692A200CBAD10073AD5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +53,11 @@
 		66B76944200CBAD10073AD5C /* DaypaperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaypaperUITests.swift; sourceTree = "<group>"; };
 		66B76946200CBAD10073AD5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66B76952200CBBA20073AD5C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7810A739030DE066D162343D /* Pods-Daypaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daypaper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daypaper/Pods-Daypaper.release.xcconfig"; sourceTree = "<group>"; };
+		B5C61D027B72B556F740D6FF /* Pods-DaypaperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaypaperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DaypaperTests/Pods-DaypaperTests.release.xcconfig"; sourceTree = "<group>"; };
+		DA041EFE2F2B1EFC1700AB14 /* Pods_DaypaperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaypaperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8B07355753223AF0E289BC2 /* Pods_DaypaperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaypaperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB4B8799F988762B119E511A /* Pods-DaypaperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaypaperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DaypaperUITests/Pods-DaypaperUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EADA5423B2C5C3D7D63566F3 /* Pods_Daypaper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B0E2158EF334A9FDEACBAC /* Pods_DaypaperTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,12 +81,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A161C7E970C38B204B7ED8BA /* Pods_DaypaperUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19C8F0F7B3827E43F2375D7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				614E94A440370A0B2DF9DC03 /* Pods_Daypaper.framework */,
+				E8B07355753223AF0E289BC2 /* Pods_DaypaperTests.framework */,
+				DA041EFE2F2B1EFC1700AB14 /* Pods_DaypaperUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		66B7691C200CBAD10073AD5C = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +105,8 @@
 				66B76938200CBAD10073AD5C /* DaypaperTests */,
 				66B76943200CBAD10073AD5C /* DaypaperUITests */,
 				66B76926200CBAD10073AD5C /* Products */,
+				BB301092140BA8F4A47097A5 /* Pods */,
+				19C8F0F7B3827E43F2375D7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +151,19 @@
 			path = DaypaperUITests;
 			sourceTree = "<group>";
 		};
+		BB301092140BA8F4A47097A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5521FD7736C810B830CD45ED /* Pods-Daypaper.debug.xcconfig */,
+				7810A739030DE066D162343D /* Pods-Daypaper.release.xcconfig */,
+				4DC96997126B6B6A335E4656 /* Pods-DaypaperTests.debug.xcconfig */,
+				B5C61D027B72B556F740D6FF /* Pods-DaypaperTests.release.xcconfig */,
+				EB4B8799F988762B119E511A /* Pods-DaypaperUITests.debug.xcconfig */,
+				3DDAF1E3F3CE1969FECF0857 /* Pods-DaypaperUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66B76949200CBAD10073AD5C /* Build configuration list for PBXNativeTarget "Daypaper" */;
 			buildPhases = (
+				9E91E4CB58AE38ED7842BFF8 /* [CP] Check Pods Manifest.lock */,
 				66B76921200CBAD10073AD5C /* Sources */,
 				66B76922200CBAD10073AD5C /* Frameworks */,
 				66B76923200CBAD10073AD5C /* Resources */,
+				BDAB22FB845D641D2E5F57E8 /* [CP] Embed Pods Frameworks */,
+				4C39657AFEB22C53F6CAA5FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,9 +191,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66B7694C200CBAD10073AD5C /* Build configuration list for PBXNativeTarget "DaypaperTests" */;
 			buildPhases = (
+				3A969FE785DD48C8AB06CC7A /* [CP] Check Pods Manifest.lock */,
 				66B76931200CBAD10073AD5C /* Sources */,
 				66B76932200CBAD10073AD5C /* Frameworks */,
 				66B76933200CBAD10073AD5C /* Resources */,
+				BC9CC4CBD18C00DB13BD907B /* [CP] Embed Pods Frameworks */,
+				E58A6A93F775C21981D430E0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66B7694F200CBAD10073AD5C /* Build configuration list for PBXNativeTarget "DaypaperUITests" */;
 			buildPhases = (
+				31A8A07EB002A1C471518B9E /* [CP] Check Pods Manifest.lock */,
 				66B7693C200CBAD10073AD5C /* Sources */,
 				66B7693D200CBAD10073AD5C /* Frameworks */,
 				66B7693E200CBAD10073AD5C /* Resources */,
+				79DC8201CC9C1686B91B2A8A /* [CP] Embed Pods Frameworks */,
+				6704C1774370C2C4822EF39A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +301,158 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31A8A07EB002A1C471518B9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DaypaperUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A969FE785DD48C8AB06CC7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DaypaperTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C39657AFEB22C53F6CAA5FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daypaper/Pods-Daypaper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6704C1774370C2C4822EF39A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DaypaperUITests/Pods-DaypaperUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79DC8201CC9C1686B91B2A8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DaypaperUITests/Pods-DaypaperUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E91E4CB58AE38ED7842BFF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Daypaper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC9CC4CBD18C00DB13BD907B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DaypaperTests/Pods-DaypaperTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDAB22FB845D641D2E5F57E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Daypaper/Pods-Daypaper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daypaper/Pods-Daypaper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E58A6A93F775C21981D430E0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DaypaperTests/Pods-DaypaperTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66B76921200CBAD10073AD5C /* Sources */ = {
@@ -413,36 +614,45 @@
 		};
 		66B7694A200CBAD10073AD5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5521FD7736C810B830CD45ED /* Pods-Daypaper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = DaypaperIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5ZP3JBY5FU;
 				INFOPLIST_FILE = Daypaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = me.meamka.Daypaper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		66B7694B200CBAD10073AD5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7810A739030DE066D162343D /* Pods-Daypaper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = DaypaperIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5ZP3JBY5FU;
 				INFOPLIST_FILE = Daypaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = me.meamka.Daypaper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 		66B7694D200CBAD10073AD5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DC96997126B6B6A335E4656 /* Pods-DaypaperTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -460,6 +670,7 @@
 		};
 		66B7694E200CBAD10073AD5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5C61D027B72B556F740D6FF /* Pods-DaypaperTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -477,6 +688,7 @@
 		};
 		66B76950200CBAD10073AD5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB4B8799F988762B119E511A /* Pods-DaypaperUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -493,6 +705,7 @@
 		};
 		66B76951200CBAD10073AD5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DDAF1E3F3CE1969FECF0857 /* Pods-DaypaperUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
